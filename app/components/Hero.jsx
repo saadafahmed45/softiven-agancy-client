@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -17,10 +18,13 @@ const Hero = () => {
                 expert team crafts stunning websites that drive conversions
               </p>
 
-              <button className="w-1/2 px-5 py-2 mt-6 text-sm tracking-wider text-primaryBg uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-blue-600 focus:outline-none focus:bg-blue-500  dark:bg-blue-700 dark:hover:bg-blue-800">
+              <Link
+                href={"/contact"}
+                className="w-1/2 px-5 py-2 mt-6 text-sm tracking-wider text-primaryBg uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-blue-600 focus:outline-none focus:bg-blue-500  dark:bg-blue-700 dark:hover:bg-blue-800"
+              >
                 {" "}
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
 

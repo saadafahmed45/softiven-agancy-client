@@ -111,7 +111,7 @@ function Navbar() {
               : "opacity-0 -translate-x-full absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
           }`}
         >
-          <div className="md:hidden flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
+          <div className="md:hidden flex flex-col -mx-6 text-center space-y-2 text-xl lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
               href={"/"}
               className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
@@ -125,10 +125,23 @@ function Navbar() {
               About
             </Link>
             <Link
-              href={"/appliedJobs"}
+              href={"/services"}
               className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
             >
-              Blog
+              Services
+            </Link>
+            <Link
+              href={"/portfolio"}
+              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+            >
+              Portfolio
+            </Link>
+
+            <Link
+              href={"/contact"}
+              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+            >
+              Contact
             </Link>
           </div>
 
