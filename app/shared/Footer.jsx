@@ -132,10 +132,10 @@ export default function Footer() {
                 +880 768 473 4978
               </a>
               <a
-                href="mailto:info@merakiui.com"
+                href="mailto:info@softiven.com"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
               >
-                info@merakiui.com
+                info@softiven.com
               </a>
             </div>
           </div>

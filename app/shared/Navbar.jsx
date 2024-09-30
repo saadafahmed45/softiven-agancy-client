@@ -23,8 +23,8 @@ function Navbar() {
     <nav className="relative bg-primaryBg dark:bg-darkBackground shadow px-6 md:px-28 py-4 mx-auto">
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex justify-between">
-          <Link href={"/"} className="text-3xl font-bold text-primary">
-            Softiven
+          <Link href={"/"}>
+            <img src="2.svg" alt="" className="object-contain" />
           </Link>
           <div className="hidden md:flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
