@@ -21,7 +21,7 @@ const Hero = () => {
               <div>
                 <Link
                   href={"/contact"}
-                  className="w-1/2 px-5 py-2 mt-6 text-sm tracking-wider text-primaryBg uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-blue-600 focus:outline-none focus:bg-blue-500  dark:bg-blue-700 dark:hover:bg-blue-800"
+                  className="w-1/2 px-5 py-2 mt-6 text-sm tracking-wider text-primaryBg uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-secondery focus:outline-none focus:bg-secondery  dark:bg-blue-700 dark:hover:bg-blue-800"
                 >
                   {" "}
                   Get Started
@@ -34,7 +34,7 @@ const Hero = () => {
             <img
               className="w-full h-full lg:max-w-3xl rounded-sm"
               // src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-              src="about_img.svg"
+              src="ab2.svg"
               alt="Catalogue-pana.svg"
             />
           </div>

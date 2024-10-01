@@ -57,7 +57,10 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white px-2 md:px-16">
+      <section
+        className="w-full py-12 md:py-24 lg:py-32 bg-white px-2 md:px-16"
+        id="services"
+      >
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
@@ -79,7 +82,7 @@ export default function ServicesPage() {
                 key={index}
                 className="flex flex-col p-6 bg-white rounded-lg shadow-md"
               >
-                <service.icon className="h-10 w-10 mb-2 text-blue-500" />
+                <service.icon className="h-10 w-10 mb-2 text-secondery" />
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-500 mb-4">{service.description}</p>
                 <ul className="space-y-2 mt-auto">
@@ -110,7 +113,7 @@ export default function ServicesPage() {
             <div className="w-full max-w-sm space-y-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primaryBg hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primaryBg hover:bg-secondery h-10 px-4 py-2 w-full"
               >
                 Get in Touch
               </Link>
@@ -128,22 +131,20 @@ export default function ServicesPage() {
               explicabo, pariatur ipsam, cupiditate aliquid modi?
             </p>
             <div>
-              <button className="px-4 py-1 font-semibold border rounded-l-lg dark:bg-violet-600 dark:border-violet-600 dark:text-gray-50">
+              <button className="px-4 py-1 font-semibold border rounded-l-lg   ">
                 Monthly
               </button>
-              <button className="px-4 py-1 border rounded-r-lg dark:border-violet-600">
+              <button className="px-4 py-1 border rounded-r-lg ">
                 Annually
               </button>
             </div>
           </div>
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:max-w-full lg:gap-2 xl:gap-6 lg:grid-cols-3">
             <div className="relative z-0 flex flex-col items-center p-8 border rounded-md">
-              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-600 dark:text-gray-50">
+              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg  ">
                 Personal
               </span>
-              <p className="my-6 text-4xl font-bold dark:text-violet-600">
-                FREE
-              </p>
+              <p className="my-6 text-4xl font-bold ">FREE</p>
               <ul className="flex-1 space-y-2">
                 <li className="flex items-center space-x-2">
                   <svg
@@ -151,7 +152,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -168,7 +169,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -185,7 +186,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -202,7 +203,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -214,18 +215,16 @@ export default function ServicesPage() {
                   <span>Lumet consectetur adipisicing</span>
                 </li>
               </ul>
-              <button className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 dark:border-violet-600">
+              <button className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 ">
                 Subscribe
               </button>
             </div>
-            <div className="relative flex flex-col items-center p-8 border-2 rounded-md dark:border-violet-600 dark:bg-gray-100">
-              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-600 dark:text-gray-50">
+            <div className="relative flex flex-col items-center p-8 border-2 rounded-md  dark:bg-gray-100">
+              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg  ">
                 Professional
               </span>
               <p className="flex items-center justify-center my-6 space-x-2 font-bold">
-                <span className="text-lg line-through dark:text-gray-700">
-                  &nbsp;32€&nbsp;
-                </span>
+                <span className="text-lg line-through ">&nbsp;32€&nbsp;</span>
                 <span className="pb-2 text-4xl">19€</span>
                 <span className="text-lg">/mo</span>
               </p>
@@ -236,7 +235,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -253,7 +252,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -270,7 +269,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -287,7 +286,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -299,18 +298,16 @@ export default function ServicesPage() {
                   <span>Lumet consectetur facilis</span>
                 </li>
               </ul>
-              <button className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded dark:bg-violet-600 dark:text-gray-50">
+              <button className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded  ">
                 Subscribe
               </button>
             </div>
             <div className="relative z-0 flex flex-col items-center p-8 border rounded-md dark:bg-gray-100">
-              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-600 dark:text-gray-50">
+              <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg  ">
                 Enterprise
               </span>
               <p className="flex items-center justify-center my-6 space-x-2 font-bold">
-                <span className="text-lg line-through dark:text-gray-700">
-                  &nbsp;49€&nbsp;
-                </span>
+                <span className="text-lg line-through ">&nbsp;49€&nbsp;</span>
                 <span className="pb-2 text-4xl">37€</span>
                 <span className="text-lg">/mo</span>
               </p>
@@ -321,7 +318,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -338,7 +335,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -355,7 +352,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -372,7 +369,7 @@ export default function ServicesPage() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-6 h-6 dark:text-violet-600"
+                    className="w-6 h-6 "
                   >
                     <path
                       strokeLinecap="round"
@@ -384,7 +381,7 @@ export default function ServicesPage() {
                   <span>Lumet consectetur adipisicing</span>
                 </li>
               </ul>
-              <button className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded dark:border-violet-600">
+              <button className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded ">
                 Subscribe
               </button>
             </div>

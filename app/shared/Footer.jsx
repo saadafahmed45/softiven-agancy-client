@@ -145,14 +145,13 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between sm:flex-row">
           <Link href="#">
-            {/* <Image
-              className="w-auto h-7"
-              src="https://merakiui.com/images/full-logo.svg"
+            <Image
+              className="h-auto w-[180px]"
+              src="1.svg"
               alt="Softiven Logo"
-              width={120}
-              height={28}
-            /> */}
-            <h3 className="text-blue-500"> Softiven Agancy</h3>
+              width={180}
+              height={50}
+            />
           </Link>
 
           <p className="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
