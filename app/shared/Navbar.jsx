@@ -20,13 +20,17 @@ function Navbar() {
   }, [darkMode]);
 
   return (
-    <nav className="relative bg-primaryBg dark:bg-darkBackground shadow px-6 md:px-28 py-4 mx-auto">
+    <nav className="relative bg-primaryBg dark:bg-darkBackground shadow px-6 md:px-20 lg:px-28 py-4 mx-auto">
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex justify-between">
           <Link href={"/"}>
-            <img src="2.svg" alt="" className="object-contain" />
+            <img
+              src="logo_2.svg"
+              alt=""
+              className="w-[150px] md:w-[180px]  object-contain "
+            />
           </Link>
-          <div className="hidden md:flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
+          <div className="hidden md:hidden lg:flex flex-col mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
               href={"/"}
               className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
@@ -111,7 +115,7 @@ function Navbar() {
               : "opacity-0 -translate-x-full absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
           }`}
         >
-          <div className="md:hidden flex flex-col -mx-6 text-center space-y-2 text-xl lg:flex-row lg:items-center lg:mx-8 font-semibold">
+          <div className="lg:hidden flex flex-col -mx-6 text-center space-y-2 text-xl lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
               href={"/"}
               className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
