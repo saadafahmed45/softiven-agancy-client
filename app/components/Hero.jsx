@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -31,11 +32,13 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 animate-fade-in">
-            <img
+            <Image
               className="w-full h-full lg:max-w-3xl rounded-sm"
               // src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-              src="ab2.webp"
-              alt="Catalogue-pana.svg"
+              src="ab2.svg"
+              alt="hero image"
+              height={500}
+              width={500}
             />
           </div>
         </div>

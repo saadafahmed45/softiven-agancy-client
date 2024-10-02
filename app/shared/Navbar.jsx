@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
@@ -24,10 +25,12 @@ function Navbar() {
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex justify-between">
           <Link href={"/"}>
-            <img
+            <Image
               src="logo_2.svg"
-              alt=""
-              className="w-[150px] md:w-[180px]  object-contain "
+              alt="Logo"
+              className="w-[150px] md:w-[180px] object-contain"
+              width={150}
+              height={50} // Adjust height based on your logo's aspect ratio
             />
           </Link>
           <div className="hidden md:hidden lg:flex flex-col mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
