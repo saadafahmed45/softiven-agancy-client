@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
+  const pathname = usePathname();
+
   const [open, setOpen] = useState(false);
   const toggleButton = () => {
     setOpen(!open);
@@ -36,7 +39,10 @@ function Navbar() {
           <div className="hidden md:hidden lg:flex flex-col mx-6 lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
               href={"/"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              // className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/" ? "text-primary" : ""
+              }`}
             >
               Home
             </Link>
@@ -54,14 +60,18 @@ function Navbar() {
             </Link>
             <Link
               href={"/portfolio"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/portfolio" ? "text-primary" : ""
+              }`}
             >
               Portfolio
             </Link>
 
             <Link
               href={"/contact"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/contact" ? "text-primary" : ""
+              }`}
             >
               Contact
             </Link>
@@ -127,26 +137,34 @@ function Navbar() {
             </Link>
             <Link
               href={"/about"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/about" ? "text-primary" : ""
+              }`}
             >
               About
             </Link>
             <Link
               href={"/services"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/services" ? "text-primary" : ""
+              }`}
             >
               Services
             </Link>
             <Link
               href={"/portfolio"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/portfolio" ? "text-primary" : ""
+              }`}
             >
               Portfolio
             </Link>
 
             <Link
               href={"/contact"}
-              className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
+                pathname === "/contact" ? "text-primary" : ""
+              }`}
             >
               Contact
             </Link>
