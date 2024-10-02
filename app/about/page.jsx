@@ -152,7 +152,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondery text-white px-2 md:px-16">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white px-2 md:px-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
@@ -168,7 +168,7 @@ export default function AboutPage() {
             <div className="w-full max-w-sm space-y-2">
               <Link
                 href="/careers"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-secondery hover:bg-gray-100 h-10 px-4 py-2 w-full"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-slate-800 hover:bg-gray-100 h-10 px-4 py-2 w-full"
               >
                 View Open Positions
               </Link>

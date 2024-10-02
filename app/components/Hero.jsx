@@ -34,7 +34,7 @@ const Hero = () => {
             <img
               className="w-full h-full lg:max-w-3xl rounded-sm"
               // src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-              src="ab2.svg"
+              src="ab2.webp"
               alt="Catalogue-pana.svg"
             />
           </div>

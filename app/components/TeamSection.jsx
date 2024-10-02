@@ -15,7 +15,7 @@ const TeamSection = () => {
         </p>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
-          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-secondery dark:border-gray-700 dark:hover:border-transparent">
+          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
             <div class="flex flex-col sm:-mx-4 sm:flex-row">
               <img
                 class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -87,7 +87,7 @@ const TeamSection = () => {
             </div>
           </div>
 
-          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-secondery dark:border-gray-700 dark:hover:border-transparent">
+          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
             <div class="flex flex-col sm:-mx-4 sm:flex-row">
               <img
                 class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -159,7 +159,7 @@ const TeamSection = () => {
             </div>
           </div>
 
-          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-secondery dark:border-gray-700 dark:hover:border-transparent">
+          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
             <div class="flex flex-col sm:-mx-4 sm:flex-row">
               <img
                 class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -231,7 +231,7 @@ const TeamSection = () => {
             </div>
           </div>
 
-          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-secondery dark:border-gray-700 dark:hover:border-transparent">
+          <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
             <div class="flex flex-col sm:-mx-4 sm:flex-row">
               <img
                 class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
