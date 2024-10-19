@@ -1,21 +1,29 @@
-import React from "react";
+"use client";
+import { useEffect, useState } from "react";
+import AOS from "aos";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once on scroll
+    });
+  }, []);
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
         <div className="container px-4 md:px-16 py-10 mx-auto">
-          <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-5xl dark:text-white">
+          <h1 data-aos="fade-up" className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-5xl dark:text-white">
             What our <span className="text-primary ">clients</span> say
           </h1>
 
-          <p className="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
+          <p data-aos="fade-up" className="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
             incidunt ex placeat modi magni quia error alias, adipisci rem
             similique, at omnis eligendi optio eos harum.
           </p>
 
-          <section className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
+          <section data-aos="fade-up" className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
             <div className="p-8 border rounded-lg dark:border-gray-700">
               <p className="leading-loose text-gray-500 dark:text-gray-400">
                 “Lorem ipsum dolor sit amet, consectetur adipisicing elit.

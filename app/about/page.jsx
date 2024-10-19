@@ -1,10 +1,20 @@
-import React from "react";
+"use client";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Users, Zap, Target } from "lucide-react";
+// import "aos/dist/aos.css";
 
 export default function AboutPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once on scroll
+    });
+  }, []);
   return (
     <>
       <section
@@ -13,7 +23,7 @@ export default function AboutPage() {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
+            <div className="space-y-2" data-aos="fade-up">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Your Web Solution Partner for Success
               </h1>
@@ -31,6 +41,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
             <Image
+              data-aos="fade-up"
               alt="Softiven team collaborating"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               height="400"
@@ -39,16 +50,26 @@ export default function AboutPage() {
             />
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2
+                  data-aos="fade-up"
+                  className="text-3xl font-bold tracking-tighter sm:text-4xl"
+                >
                   Our Journey
                 </h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+                >
                   Founded in 2021, Softiven began with a vision to revolutionize
                   the software industry. What started as a small team of
                   passionate developers has grown into a global force in
                   technology innovation.
                 </p>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+                >
                   Today, we're proud to have served over 500 clients across 30
                   countries, delivering cutting-edge solutions that drive
                   business growth and efficiency.
@@ -56,6 +77,7 @@ export default function AboutPage() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
+                  data-aos="fade-up"
                   href="/portfolio"
                   className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-secondery h-10 px-4 py-2"
                 >
@@ -76,10 +98,16 @@ export default function AboutPage() {
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white px-2 md:px-16">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
+          <h2
+            data-aos="fade-up"
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12"
+          >
             Our Core Values
           </h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
             <div className="flex flex-col items-center space-y-4 p-6 bg-gray-50 rounded-lg">
               <Zap className="h-12 w-12 text-secondery" />
               <h3 className="text-xl font-bold">Innovation</h3>
@@ -114,10 +142,13 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
             <div className="flex flex-col justify-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              <h2
+                data-aos="fade-up"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl"
+              >
                 Why Choose Softiven?
               </h2>
-              <ul className="space-y-3">
+              <ul data-aos="fade-up" className="space-y-3">
                 {[
                   "Expert team of developers, designers, and strategists",
                   "Proven track record of successful projects across various industries",
@@ -156,10 +187,16 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              <h2
+                data-aos="fade-up"
+                className="text-3xl font-bold tracking-tighter sm:text-5xl"
+              >
                 Join Our Growing Team
               </h2>
-              <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p
+                data-aos="fade-up"
+                className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+              >
                 We're always on the lookout for talented individuals who are
                 passionate about technology and innovation. Explore our career
                 opportunities and be part of something extraordinary.

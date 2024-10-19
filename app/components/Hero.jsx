@@ -33,9 +33,9 @@ const Hero = () => {
 
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 animate-fade-in">
             <Image
-              className="w-full h-full lg:max-w-3xl rounded-sm"
+              className="w-full h-full lg:max-w-3xl rounded-sm animate-upDown"
               // src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-              src="ab2.svg"
+              src="/ab2.webp"
               alt="hero image"
               height={500}
               width={500}

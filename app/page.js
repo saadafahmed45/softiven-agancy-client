@@ -12,8 +12,8 @@ export default function Home() {
     <main className="bg-darkText">
       <Hero />
       <AboutPage />
-      <Testimonials />
       <ServicesPage />
+      <Testimonials />
       <TeamSection />
       <Cta/>
       {/* <PortfolioPage /> */}

@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+import AOS from "aos";
 import {
   CheckCircle,
   Globe,
@@ -9,6 +12,12 @@ import {
 import Link from "next/link";
 
 export default function ServicesPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once on scroll
+    });
+  }, []);
   const services = [
     {
       icon: Globe,
@@ -64,10 +73,16 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              <h1
+                data-aos="fade-up"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none"
+              >
                 Our Services
               </h1>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
+              <p
+                data-aos="fade-up"
+                className="mx-auto max-w-[700px] text-gray-500 md:text-xl"
+              >
                 Comprehensive software solutions to drive your business forward.
               </p>
             </div>
@@ -80,6 +95,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
+                data-aos="fade-up"
                 className="flex flex-col p-6 bg-white rounded-lg shadow-md"
               >
                 <service.icon className="h-10 w-10 mb-2 text-secondery" />
@@ -102,10 +118,16 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              <h2
+                data-aos="fade-up"
+                className="text-3xl font-bold tracking-tighter sm:text-5xl"
+              >
                 Need a Custom Solution?
               </h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p
+                data-aos="fade-up"
+                className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+              >
                 We specialize in creating bespoke software solutions tailored to
                 your unique business requirements.
               </p>
