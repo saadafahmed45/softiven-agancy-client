@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
 import "aos/dist/aos.css";
+import ContextProvider from "./Context/Context";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -43,9 +44,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <div className="bg-background dark:bg-darkBackground">{children}</div>
-        <Footer />
+        <ContextProvider>
+          <Navbar />
+          <div className="bg-background dark:bg-darkBackground">{children}</div>
+          <Footer />
+        </ContextProvider>
       </body>
     </html>
   );

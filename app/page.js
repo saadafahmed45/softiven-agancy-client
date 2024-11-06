@@ -6,6 +6,7 @@ import PortfolioPage from "./portfolio/page";
 import Testimonials from "./components/Testimonials";
 import TeamSection from "./components/TeamSection";
 import Cta from "./components/Cta";
+import TestimonialSlider from "./components/TestimonialSlider";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       <ServicesPage />
       <Testimonials />
       <TeamSection />
-      <Cta/>
+      <TestimonialSlider />
+      <Cta />
       {/* <PortfolioPage /> */}
     </main>
   );

@@ -172,9 +172,12 @@ function Navbar() {
 
           {/* Login Button */}
           <div className="flex items-center justify-start flex-col md:flex-row gap-4 lg:mt-0">
-            <button className="text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary font-semibold">
+            <Link
+              href={"/login"}
+              className="text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary font-semibold"
+            >
               Login
-            </button>
+            </Link>
             <button className="px-3 py-2 border border-primary text-primary rounded-md transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-darkBackground dark:text-darkText focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 font-semibold">
               Get started
             </button>
