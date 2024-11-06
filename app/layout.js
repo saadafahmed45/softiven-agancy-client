@@ -17,23 +17,18 @@ const geistMono = localFont({
 
 // Define metadata for the entire application
 export const metadata = {
-  title: "Softiven - Your Software Solutions Partner",
+  title:
+    "Softiven - Your Trusted Partner for Shopify, React JS, MERN Stack, Wix, and WordPress Development", // Maintain brand recognition
   description:
-    "Softiven offers innovative software solutions for businesses, focusing on quality and efficiency.",
+    "EWe specialize in crafting exceptional digital experiences. Our team of experts leverages leading technologies like Shopify, React JS, MERN Stack, Wix, and WordPress to deliver tailored solutions that drive business growth",
   keywords:
-    "software solutions, web development, software development, IT services",
+    "Shopify development, ReactJS app development, MERN stack development, Wix website design, WordPress development", // Replace with your researched keywords
   authors: [{ name: "Softiven Team" }],
   openGraph: {
     title: "Softiven - Your Software Solutions Partner",
     description:
       "Discover how Softiven can elevate your business with our cutting-edge software solutions.",
     url: "https://www.softiven.com",
-    images: "/path/to/your/image.jpg",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Softiven - Your Software Solutions Partner",
-    description: "Innovative software solutions to enhance your business.",
     images: "/path/to/your/image.jpg",
   },
 };
