@@ -5,7 +5,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="bg-white dark:bg-darkBackground ">
-      <div className="container px-6 md:px-16 py-10 mx-auto">
+      <div className="container px-6 py-16 md:px-16 md:py-24 mx-auto">
         <div className="items-center lg:flex">
           <div className="w-full lg:w-1/2 ">
             <div className="lg:max-w-md space-y-6 ">

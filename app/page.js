@@ -16,7 +16,7 @@ export default function Home() {
       <ServicesPage />
       <Testimonials />
       <TeamSection />
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
       <Cta />
       {/* <PortfolioPage /> */}
     </main>

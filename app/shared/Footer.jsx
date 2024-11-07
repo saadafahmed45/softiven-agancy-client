@@ -147,7 +147,7 @@ export default function Footer() {
           <Link href="#">
             <Image
               className="h-auto w-[180px]"
-              src="1.svg"
+              src="logo_2.svg"
               alt="Softiven Logo"
               width={180}
               height={50}

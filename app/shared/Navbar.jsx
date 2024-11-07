@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { usePathname } from "next/navigation";
+import { MyContext } from "../Context/Context";
 
 function Navbar() {
   const pathname = usePathname();
@@ -23,6 +24,14 @@ function Navbar() {
     }
   }, [darkMode]);
 
+
+
+  // context
+
+  const { handleGoogleLogin, user, handleSingOut } = useContext(MyContext);
+  const { displayName, photoURL, emailVerified, email } = user;
+
+
   return (
     <nav className="relative bg-primaryBg dark:bg-darkBackground shadow px-6 md:px-20 lg:px-28 py-4 mx-auto">
       <div className="lg:flex lg:items-center lg:justify-between">
@@ -40,9 +49,8 @@ function Navbar() {
             <Link
               href={"/"}
               // className="px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary"
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/" ? "text-primary" : ""
+                }`}
             >
               Home
             </Link>
@@ -60,18 +68,16 @@ function Navbar() {
             </Link>
             <Link
               href={"/portfolio"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/portfolio" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/portfolio" ? "text-primary" : ""
+                }`}
             >
               Portfolio
             </Link>
 
             <Link
               href={"/contact"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/contact" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/contact" ? "text-primary" : ""
+                }`}
             >
               Contact
             </Link>
@@ -122,11 +128,10 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`${
-            open
-              ? "translate-x-0 opacity-100 absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
-              : "opacity-0 -translate-x-full absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
-          }`}
+          className={`${open
+            ? "translate-x-0 opacity-100 absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+            : "opacity-0 -translate-x-full absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-darkBackground lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+            }`}
         >
           <div className="lg:hidden flex flex-col -mx-6 text-center space-y-2 text-xl lg:flex-row lg:items-center lg:mx-8 font-semibold">
             <Link
@@ -137,34 +142,30 @@ function Navbar() {
             </Link>
             <Link
               href={"/about"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/about" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/about" ? "text-primary" : ""
+                }`}
             >
               About
             </Link>
             <Link
               href={"/services"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/services" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/services" ? "text-primary" : ""
+                }`}
             >
               Services
             </Link>
             <Link
               href={"/portfolio"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/portfolio" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/portfolio" ? "text-primary" : ""
+                }`}
             >
               Portfolio
             </Link>
 
             <Link
               href={"/contact"}
-              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${
-                pathname === "/contact" ? "text-primary" : ""
-              }`}
+              className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary ${pathname === "/contact" ? "text-primary" : ""
+                }`}
             >
               Contact
             </Link>
@@ -172,12 +173,27 @@ function Navbar() {
 
           {/* Login Button */}
           <div className="flex items-center justify-start flex-col md:flex-row gap-4 lg:mt-0">
-            <Link
-              href={"/login"}
-              className="text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary font-semibold"
-            >
-              Login
-            </Link>
+            {
+              user.emailVerified == true ?
+                <div className="flex items-center gap-2">
+                  <img class="object-cover w-10 h-10 rounded-full ring ring-gray-300 dark:ring-gray-600" src={photoURL} alt="" />
+
+                  <button
+                    onClick={handleSingOut}
+                    className="text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary font-semibold"
+                  >
+                    Logout
+                  </button>
+                </div>
+                :
+
+                <Link
+                  href={"/login"}
+                  className="text-gray-800 dark:text-darkText transition-colors duration-300 transform rounded-md lg:mt-0 hover:text-primary font-semibold"
+                >
+                  Login
+                </Link>
+            }
             <button className="px-3 py-2 border border-primary text-primary rounded-md transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-darkBackground dark:text-darkText focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 font-semibold">
               Get started
             </button>

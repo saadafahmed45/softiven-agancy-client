@@ -48,7 +48,7 @@ export default function TestimonialSlider() {
         <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
           What our clients are saying
         </h1>
-
+        <h1 className="w-10"> hello </h1>
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}

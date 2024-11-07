@@ -1,12 +1,23 @@
 "use client";
 import React, { useContext } from "react";
 import { MyContext } from "../Context/Context";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
-  const { handleGoogleLogin } = useContext(MyContext);
+  const { handleGoogleLogin, user } = useContext(MyContext);
+  const { displayName, photoURL, emailVerified, email } = user;
+  const router = useRouter();
+
+  if (user.emailVerified == true) {
+
+    router.push("/profile");
+  }
+
+
+
 
   return (
-    <div className="px- py-24">
+    <div className="px-16 py-24 ">
       <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
         <div
           className="hidden bg-cover lg:block lg:w-1/2"
@@ -75,7 +86,7 @@ const LoginPage = () => {
           <div className="mt-4">
             <label
               className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-              for="LoggingEmailAddress"
+              htmlFor="LoggingEmailAddress" // Changed 'for' to 'htmlFor'
             >
               Email Address
             </label>
@@ -90,7 +101,8 @@ const LoginPage = () => {
             <div className="flex justify-between">
               <label
                 className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-                for="loggingPassword"
+                htmlFor="loggingPassword" // Changed 'for' to 'htmlFor'
+
               >
                 Password
               </label>
