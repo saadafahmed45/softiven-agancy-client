@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -102,7 +105,7 @@ export default function Footer() {
                 href="#"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
               >
-                Translation
+                Shopify App Development
               </Link>
               <Link
                 href="#"
@@ -114,7 +117,7 @@ export default function Footer() {
                 href="#"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
               >
-                Content Creation
+                Custom Software Development
               </Link>
             </div>
           </div>
@@ -125,18 +128,45 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col items-start mt-5 space-y-2">
-              <a
-                href="tel:+8807684734978"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                +880 768 473 4978
-              </a>
+
               <a
                 href="mailto:info@softiven.com"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
               >
                 info@softiven.com
               </a>
+            </div>
+
+
+            <div>
+              <p className="font-semibold text-gray-800 dark:text-white mt-4">
+                Social Media
+              </p>
+              <div className="flex items-center gap-2  mt-2">
+
+                <a
+                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  href="mailto:info@softiven.com"
+                >
+                  <FaFacebook />
+                </a>
+
+                <a
+                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  href="mailto:info@softiven.com"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  href="mailto:info@softiven.com"
+                >
+                  <FaTwitterSquare />
+                </a>
+
+
+
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +177,7 @@ export default function Footer() {
           <Link href="#">
             <Image
               className="h-auto w-[180px]"
-              src="logo_2.svg"
+              src="/footer.png"
               alt="Softiven Logo"
               width={180}
               height={50}
