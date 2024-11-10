@@ -146,7 +146,7 @@ export default function Footer() {
 
                 <a
                   className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                  href="mailto:info@softiven.com"
+                  href="https://www.facebook.com/softiven"
                 >
                   <FaFacebook />
                 </a>
