@@ -10,13 +10,14 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 ">
             <div className="lg:max-w-md space-y-6 ">
               <h1 className="animate-fade-in text-4xl font-bold text-gray-900 dark:text-darkText lg:text-6xl">
-                Innovative Web Development for Modern
+                {/* Innovative Software Development to Grow Your */}
+                Web Solutions to Boost Your
                 <span className="text-primary"> Businesses </span>
               </h1>
 
               <p className="mt-3 text-gray-600 dark:text-gray-300 text-xl md:text-2xl">
-                User-friendly web solutions that elevate your business. Our
-                expert team crafts stunning websites that drive conversions
+                Custom Web Solutions to Boost Your Business with React, Next.js,
+                Shopify, WordPress, Wix, and Webflow
               </p>
 
               <div>

@@ -21,16 +21,22 @@ export default function AboutPage() {
         className="w-full py-12 md:py-24 lg:py-32 px-2 md:px-16 bg-white "
         id="about"
       >
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-2 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2" data-aos="fade-up">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Your Web Solution Partner for Success
+                {/* Your Web Solution Partner for Success */}
+                Software Solutions to Boost Your Business
               </h1>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                At Softiven, we've been pushing the boundaries of technology
-                since 2010, crafting innovative solutions for businesses
-                worldwide.
+              {/* Please add margin top 36px for learge screen */}
+              <p className="mx-auto  max-w-[800px] text-gray-500 md:text-xl">
+                At Softiven, we specialize in delivering user-friendly software
+                like websites and mobile apps that help your business grow. Our
+                expert team offers custom web development services using
+                platforms like React, Next.js, Shopify, WordPress, Wix, and
+                Webflow, ensuring you get a powerful, responsive website that
+                drives conversions, enhances customer engagement, and
+                strengthens your digital presence.
               </p>
             </div>
           </div>
@@ -60,19 +66,20 @@ export default function AboutPage() {
                   data-aos="fade-up"
                   className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 >
-                  Founded in 2021, Softiven began with a vision to revolutionize
-                  the software industry. What started as a small team of
-                  passionate developers has grown into a global force in
-                  technology innovation.
+                  Softiven was founded in 2021 with a simple vision to help
+                  businesses thrive in the digital world.
                 </p>
                 <p
                   data-aos="fade-up"
                   data-aos-delay="200"
                   className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 >
-                  Today, we're proud to have served over 500 clients across 30
-                  countries, delivering cutting-edge solutions that drive
-                  business growth and efficiency.
+                  Our journey began by focusing on custom web development and
+                  then mobile app solutions. As the digital landscape evolved,
+                  so did we, expanding our expertise to platforms like Shopify,
+                  WordPress, Wix, and Webflow. Our goal was always to provide
+                  businesses with user-friendly, responsive solutions that drive
+                  real results.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -150,11 +157,12 @@ export default function AboutPage() {
               </h2>
               <ul data-aos="fade-up" className="space-y-3">
                 {[
-                  "Expert team of developers, designers, and strategists",
+                  "Expert team of developers, designers, digital-marketers and strategists",
                   "Proven track record of successful projects across various industries",
-                  "Cutting-edge technology stack and best practices",
                   "Agile development methodology for flexibility and efficiency",
+                  "Cutting-edge technology stack and best practices",
                   "Dedicated support and maintenance services",
+                  "End-to-End Digital Marketing Solutions ",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500" />
