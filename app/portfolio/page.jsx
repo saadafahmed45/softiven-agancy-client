@@ -13,49 +13,23 @@ export default function PortfolioPage() {
   }, []);
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "Fristads",
       description: "A scalable e-commerce solution for a leading retail brand.",
       image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["Web Development", "React", "Node.js"],
+        "/prt1.png",
+      tags: ["Web Development", "React", "Next.js", "Node.js"],
     },
     {
-      title: "Health & Fitness App",
+      title: "Gym Shark",
       description: "Mobile app for tracking workouts and nutrition.",
       image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["Mobile Development", "React Native", "Firebase"],
+        "/prt2.png",
+
+      tags: ["Shopify Development", "Liquid ", "JAVASCRIPT", "HTML", "CSS"],
     },
-    {
-      title: "Financial Dashboard",
-      description:
-        "Real-time financial data visualization for a fintech startup.",
-      image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["Web Development", "D3.js", "Python"],
-    },
-    {
-      title: "Smart Home IoT Platform",
-      description: "IoT platform for managing smart home devices.",
-      image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["IoT", "Cloud Computing", "React"],
-    },
-    {
-      title: "AI-powered Chatbot",
-      description: "Customer service chatbot with natural language processing.",
-      image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["AI", "NLP", "Python"],
-    },
-    {
-      title: "Supply Chain Management System",
-      description:
-        "End-to-end supply chain management solution for a global manufacturer.",
-      image:
-        "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
-      tags: ["Web Development", "Blockchain", "React"],
-    },
+
+
+
   ];
 
   return (
@@ -94,7 +68,7 @@ export default function PortfolioPage() {
                   alt={project.title}
                   width={400}
                   height={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-72 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
