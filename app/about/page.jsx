@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import { motion } from "framer-motion";
-
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Users, Zap, Target } from "lucide-react";
@@ -17,19 +17,32 @@ export default function AboutPage() {
   }, []);
   return (
     <>
+
+      <Head>
+        <title>About Us | Custom Web Development & Software Solutions | Softiven</title>
+        <meta
+          name="description"
+          content="Discover Softiven's journey and expertise in delivering top-notch custom web development, mobile app solutions, and digital marketing services to boost your business."
+        />
+        <meta name="keywords" content="web development, custom software, digital marketing, React developer, Next.js, Shopify, SEO optimization" />
+        <meta property="og:title" content="About Us - Softiven" />
+        <meta property="og:description" content="Explore our journey, core values, and why businesses choose Softiven for custom software solutions." />
+        <meta property="og:image" content="https://images.pexels.com/photos/3182762/pexels-photo-3182762.jpeg" />
+        <meta property="og:url" content="https://softiven-agancy.vercel.app/about" />
+      </Head>
       <section
         className="w-full py-12 md:py-24 lg:py-32 px-2 md:px-16 bg-white "
         id="about"
       >
         <div className="container mx-auto px-2 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2" data-aos="fade-up">
+            <div className="space-y-6" data-aos="fade-up">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 {/* Your Web Solution Partner for Success */}
                 Software Solutions to Boost Your Business
               </h1>
               {/* Please add margin top 36px for learge screen */}
-              <p className="mx-auto  max-w-[800px] text-gray-500 md:text-xl">
+              <p className="mx-auto text-left md:text-center  max-w-[800px] text-gray-500 md:text-xl">
                 At Softiven, we specialize in delivering user-friendly software
                 like websites and mobile apps that help your business grow. Our
                 expert team offers custom web development services using

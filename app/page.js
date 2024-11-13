@@ -20,7 +20,7 @@ export default function Home() {
       <Hero />
       <FloatingWhatsApp
         phoneNumber="+8801890195058"
-        accountName="Softiven"
+        accountName="Softiven Team"
         // avatar="/path/to/avatar.png" // Optional: You can add your custom avatar image
         chatMessage="Hello there! How can we assist you today?" // Default message
         statusMessage="Typically replies within 1 hour"
