@@ -132,6 +132,8 @@ export default function Footer() {
               <a
                 href="mailto:info@softiven.com"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                alt="Softiven Email Account"
+
               >
                 info@softiven.com
               </a>
@@ -147,6 +149,7 @@ export default function Footer() {
                 <a
                   className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                   href="https://www.facebook.com/softiven"
+                  alt="Softiven Facebook Page"
                 >
                   <FaFacebook />
                 </a>
@@ -154,12 +157,14 @@ export default function Footer() {
                 <a
                   className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                   href="mailto:info@softiven.com"
+                  alt="Softiven Linkdin Account"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                   href="mailto:info@softiven.com"
+                  alt="Softiven Twitter Account"
                 >
                   <FaTwitterSquare />
                 </a>

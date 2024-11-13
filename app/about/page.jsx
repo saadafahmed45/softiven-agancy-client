@@ -66,6 +66,10 @@ export default function AboutPage() {
               height="400"
               src="https://images.pexels.com/photos/3182762/pexels-photo-3182762.jpeg"
               width="600"
+
+              layout="responsive"
+              priority // Add this to prioritize loading
+              quality={75}
             />
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">

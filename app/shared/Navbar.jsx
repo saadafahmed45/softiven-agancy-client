@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { usePathname } from "next/navigation";
 import { MyContext } from "../Context/Context";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const pathname = usePathname();
@@ -106,20 +107,8 @@ function Navbar() {
                   />
                 </svg>
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 8h16M4 16h16"
-                  />
-                </svg>
+                <GiHamburgerMenu className="text-2xl" />
+
               )}
             </button>
           </div>
