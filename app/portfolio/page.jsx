@@ -66,9 +66,9 @@ export default function PortfolioPage() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={400}
-                  height={200}
-                  className="w-full h-72 object-cover"
+                  width={500}
+                  height={300}
+                  className="w-full h-auto object-cover aspect-video"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
