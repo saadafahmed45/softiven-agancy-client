@@ -17,18 +17,31 @@ export default function AboutPage() {
   }, []);
   return (
     <>
-
       <Head>
-        <title>About Us | Custom Web Development & Software Solutions | Softiven</title>
+        <title>
+          About Us | Custom Web Development & Software Solutions | Softiven
+        </title>
         <meta
           name="description"
           content="Discover Softiven's journey and expertise in delivering top-notch custom web development, mobile app solutions, and digital marketing services to boost your business."
         />
-        <meta name="keywords" content="web development, custom software, digital marketing, React developer, Next.js, Shopify, SEO optimization" />
+        <meta
+          name="keywords"
+          content="web development, custom software, digital marketing, React developer, Next.js, Shopify, SEO optimization"
+        />
         <meta property="og:title" content="About Us - Softiven" />
-        <meta property="og:description" content="Explore our journey, core values, and why businesses choose Softiven for custom software solutions." />
-        <meta property="og:image" content="https://images.pexels.com/photos/3182762/pexels-photo-3182762.jpeg" />
-        <meta property="og:url" content="https://softiven-agancy.vercel.app/about" />
+        <meta
+          property="og:description"
+          content="Explore our journey, core values, and why businesses choose Softiven for custom software solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://images.pexels.com/photos/3182762/pexels-photo-3182762.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://softiven-agancy.vercel.app/about"
+        />
       </Head>
       <section
         className="w-full py-12 md:py-24 lg:py-32 px-2 md:px-16 bg-white "
@@ -66,7 +79,6 @@ export default function AboutPage() {
               height="400"
               src="https://images.pexels.com/photos/3182762/pexels-photo-3182762.jpeg"
               width="600"
-
               layout="responsive"
               priority // Add this to prioritize loading
               quality={75}
