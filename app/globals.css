@@ -2,6 +2,213 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  background-color: #0A0F1E;
+  color: #F1F5F9;
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #0EA5E9, #22D3EE, #6366F1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #22D3EE, #0EA5E9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glass Card ── */
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 8px 48px rgba(14, 165, 233, 0.2);
+  transform: translateY(-4px);
+}
+
+/* ── Glow Button ── */
+.btn-primary {
+  background: linear-gradient(135deg, #0EA5E9, #6366F1);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Hind Siliguri', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 40px rgba(14, 165, 233, 0.55);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #38BDF8, #818CF8);
+}
+
+.btn-outline {
+  border: 1.5px solid rgba(14, 165, 233, 0.5);
+  color: #0EA5E9;
+  padding: 11px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Hind Siliguri', sans-serif;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: #0EA5E9;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
+}
+
+/* ── Section Heading ── */
+.section-badge {
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: #0EA5E9;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/* ── Blob Background ── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: blob 7s infinite;
+  pointer-events: none;
+}
+
+/* ── Shimmer Line ── */
+.shimmer-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0EA5E9, #6366F1, #22D3EE, transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+  border-radius: 999px;
+}
+
+/* ── Nav Glass ── */
+.nav-glass {
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+/* ── Stat Card ── */
+.stat-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(14, 165, 233, 0.5);
+  box-shadow: 0 4px 24px rgba(14, 165, 233, 0.15);
+}
+
+/* ── Service Card ── */
+.service-card {
+  background: linear-gradient(135deg, #0F172A, #1E293B);
+  border: 1px solid rgba(14, 165, 233, 0.12);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0EA5E9, #6366F1, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 12px 60px rgba(14, 165, 233, 0.2);
+  transform: translateY(-6px);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* ── Testimonial Card ── */
+.testimonial-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.12);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(14, 165, 233, 0.35);
+  box-shadow: 0 8px 40px rgba(14, 165, 233, 0.15);
+}
+
+/* ── Section divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.3), transparent);
+  margin: 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0F1E; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0EA5E9, #6366F1);
+  border-radius: 3px;
+}
+
+/* ── AOS overrides for dark theme ── */
+[data-aos] { pointer-events: none; }
+[data-aos].aos-animate { pointer-events: auto; }
