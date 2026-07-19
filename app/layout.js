@@ -4,6 +4,7 @@ import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
 import "aos/dist/aos.css";
 import ContextProvider from "./Context/Context";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -15,33 +16,41 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// Define metadata for the entire application
 export const metadata = {
-  title:
-    "Softiven - Your Trusted Partner for Shopify, React JS, MERN Stack, Wix, and WordPress Development", // Maintain brand recognition
+  title: "Softiven - ওয়েবসাইট, Shopify স্টোর ও Facebook মার্কেটিং এজেন্সি",
   description:
-    "EWe specialize in crafting exceptional digital experiences. Our team of experts leverages leading technologies like Shopify, React JS, MERN Stack, Wix, and WordPress to deliver tailored solutions that drive business growth",
+    "Softiven আপনার ব্যবসার জন্য প্রফেশনাল ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন ও ডেভেলপমেন্ট এবং Facebook মার্কেটিং সেবা প্রদান করে। আপনার ব্যবসাকে ডিজিটালে নিয়ে যান।",
   keywords:
-    "Shopify development, ReactJS app development, MERN stack development, Wix website design, WordPress development", // Replace with your researched keywords
+    "ওয়েবসাইট তৈরি, Shopify স্টোর, Facebook মার্কেটিং, ডিজিটাল মার্কেটিং, বাংলাদেশ, ব্যবসায়িক সমাধান, Softiven",
   authors: [{ name: "Softiven Team" }],
   openGraph: {
-    title: "Softiven - Your Software Solutions Partner",
+    title: "Softiven - আপনার ব্যবসার ডিজিটাল সমাধান",
     description:
-      "Discover how Softiven can elevate your business with our cutting-edge software solutions.",
-    url: "https://www.softiven.com",
-    images: "/path/to/your/image.jpg",
+      "ওয়েবসাইট তৈরি, Shopify স্টোর ও Facebook মার্কেটিং — সবকিছু এক জায়গায়।",
+    url: "https://softiven-agancy.vercel.app",
+    images: "/logo_2.svg",
+    locale: "bn_BD",
+    type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="bn">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0A0F1E] text-[#F1F5F9]`}
       >
         <ContextProvider>
           <Navbar />
-          <div className="bg-background dark:bg-darkBackground">{children}</div>
+          <div className="bg-[#0A0F1E]">{children}</div>
           <Footer />
         </ContextProvider>
       </body>

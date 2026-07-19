@@ -1,196 +1,166 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Zap } from "lucide-react";
+
+const quickLinks = [
+  { href: "/", label: "হোম" },
+  { href: "/about", label: "আমাদের সম্পর্কে" },
+  { href: "/services", label: "সেবাসমূহ" },
+  { href: "/portfolio", label: "পোর্টফোলিও" },
+  { href: "/contact", label: "যোগাযোগ" },
+];
+
+const serviceLinks = [
+  { href: "/services", label: "ওয়েবসাইট তৈরি" },
+  { href: "/services", label: "Shopify স্টোর ডিজাইন" },
+  { href: "/services", label: "Facebook মার্কেটিং" },
+  { href: "/services", label: "ব্র্যান্ড ডিজাইন" },
+  { href: "/services", label: "SEO সেবা" },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-100 dark:bg-gray-900">
-      <div className="container px-6 md:px-16  py-12 mx-auto">
-        <div className="md:flex md:-mx-3 md:items-center md:justify-between">
-          <h1 className="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl dark:text-white">
-            Subscribe to our newsletter for updates.
-          </h1>
-
-          <div className="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg gap-x-3 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
-            >
-              <span>Sign Up Now</span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <hr className="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div>
-            <p className="font-semibold text-gray-800 dark:text-white">
-              Quick Links
+    <footer className="bg-[#060B18] border-t border-[#0EA5E9]/10">
+      {/* Top section */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand column */}
+          <div className="lg:col-span-1 space-y-6">
+            <Link href="/" className="flex items-center gap-2 group inline-flex">
+              <Zap className="w-7 h-7 text-[#0EA5E9] fill-[#0EA5E9]/20 group-hover:rotate-12 transition-transform duration-300" />
+              <span className="gradient-text text-3xl font-bold font-display tracking-tight">
+                Softiven
+              </span>
+            </Link>
+            <p className="text-[#64748B] text-sm leading-relaxed">
+              Softiven — আপনার ব্যবসার বিশ্বস্ত ডিজিটাল পার্টনার। ওয়েবসাইট, Shopify
+              ও Facebook মার্কেটিংয়ে আমরা আপনার পাশে।
             </p>
-
-            <div className="flex flex-col items-start mt-5 space-y-2">
-              <Link
-                href="/"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+            {/* Social links */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/softiven"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Softiven Facebook"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-[#0F172A] border border-[#1E293B] text-[#64748B] hover:text-[#0EA5E9] hover:border-[#0EA5E9]/40 hover:bg-[#0EA5E9]/10 transition-all duration-200"
               >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                <FaFacebook className="text-base" />
+              </a>
+              <a
+                href="https://wa.me/8801890195058"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Softiven WhatsApp"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-[#0F172A] border border-[#1E293B] text-[#64748B] hover:text-[#22D3EE] hover:border-[#22D3EE]/40 hover:bg-[#22D3EE]/10 transition-all duration-200"
               >
-                Who We Are
-              </Link>
-              <Link
-                href="/philosophy"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Our Philosophy
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-gray-800 dark:text-white">
-              Industries
-            </p>
-
-            <div className="flex flex-col items-start mt-5 space-y-2">
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Retail & E-Commerce
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Information Technology
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Finance & Insurance
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-gray-800 dark:text-white">
-              Services
-            </p>
-
-            <div className="flex flex-col items-start mt-5 space-y-2">
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Shopify App Development
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Proofreading & Editing
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-              >
-                Custom Software Development
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-gray-800 dark:text-white">
-              Contact Us
-            </p>
-
-            <div className="flex flex-col items-start mt-5 space-y-2">
-
+                <FaWhatsapp className="text-base" />
+              </a>
               <a
                 href="mailto:info@softiven.com"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                alt="Softiven Email Account"
-
+                aria-label="Softiven LinkedIn"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-[#0F172A] border border-[#1E293B] text-[#64748B] hover:text-[#6366F1] hover:border-[#6366F1]/40 hover:bg-[#6366F1]/10 transition-all duration-200"
               >
-                info@softiven.com
+                <FaLinkedin className="text-base" />
               </a>
             </div>
+          </div>
 
-
-            <div>
-              <p className="font-semibold text-gray-800 dark:text-white mt-4">
-                Social Media
-              </p>
-              <div className="flex items-center gap-2  mt-2">
-
-                <a
-                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                  href="https://www.facebook.com/softiven"
-                  alt="Softiven Facebook Page"
+          {/* Quick Links */}
+          <div>
+            <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
+              দ্রুত লিংক
+            </p>
+            <div className="flex flex-col gap-3">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href + link.label}
+                  href={link.href}
+                  className="text-[#64748B] text-sm hover:text-[#0EA5E9] transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <FaFacebook />
-                </a>
-
-                <a
-                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                  href="mailto:info@softiven.com"
-                  alt="Softiven Linkdin Account"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  className="text-2xl text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                  href="mailto:info@softiven.com"
-                  alt="Softiven Twitter Account"
-                >
-                  <FaTwitterSquare />
-                </a>
-
-
-
-              </div>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0EA5E9]/30 group-hover:bg-[#0EA5E9] transition-colors" />
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
+
+          {/* Services */}
+          <div>
+            <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
+              আমাদের সেবা
+            </p>
+            <div className="flex flex-col gap-3">
+              {serviceLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-[#64748B] text-sm hover:text-[#0EA5E9] transition-colors duration-200 flex items-center gap-2 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]/30 group-hover:bg-[#6366F1] transition-colors" />
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
+              যোগাযোগ করুন
+            </p>
+            <div className="space-y-4">
+              <a
+                href="mailto:info@softiven.com"
+                className="flex items-center gap-3 text-[#64748B] text-sm hover:text-[#0EA5E9] transition-colors duration-200 group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0EA5E9]/20">
+                  <FaEnvelope className="text-[#0EA5E9] text-xs" />
+                </div>
+                info@softiven.com
+              </a>
+              <a
+                href="tel:+8801890195058"
+                className="flex items-center gap-3 text-[#64748B] text-sm hover:text-[#22D3EE] transition-colors duration-200 group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#22D3EE]/10 border border-[#22D3EE]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#22D3EE]/20">
+                  <FaPhoneAlt className="text-[#22D3EE] text-xs" />
+                </div>
+                +880 1890-195058
+              </a>
+              <div className="flex items-start gap-3 text-[#64748B] text-sm">
+                <div className="w-8 h-8 rounded-lg bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <FaMapMarkerAlt className="text-[#6366F1] text-xs" />
+                </div>
+                ঢাকা, বাংলাদেশ
+              </div>
+            </div>
+
+            {/* Book consultation mini CTA */}
+            <Link
+              href="/contact"
+              className="mt-6 w-full btn-primary text-sm justify-center"
+              id="footer-book-consultation"
+            >
+              পরামর্শ নিন
+            </Link>
+          </div>
         </div>
+      </div>
 
-        <hr className="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+      {/* Divider */}
+      <div className="section-divider" />
 
-        <div className="flex flex-col items-center justify-between sm:flex-row">
-          <Link href="#">
-            <Image
-              className="h-auto w-[180px]"
-              src="/footer.png"
-              alt="Softiven Logo"
-              width={180}
-              height={50}
-            />
-          </Link>
-
-          <p className="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
-            © Copyright {new Date().getFullYear()}. All Rights Reserved.
+      {/* Bottom bar */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[#475569] text-sm text-center sm:text-left">
+            © {new Date().getFullYear()} Softiven. সর্বস্বত্ব সংরক্ষিত।
+          </p>
+          <p className="text-[#475569] text-sm text-center">
+            ❤️ দিয়ে তৈরি করেছে{" "}
+            <span className="gradient-text font-semibold">Softiven Team</span>
           </p>
         </div>
       </div>

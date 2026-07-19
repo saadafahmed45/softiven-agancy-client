@@ -2,133 +2,148 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { MyContext } from "../Context/Context";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
+import { FaCalendarAlt } from "react-icons/fa";
+import { Zap } from "lucide-react";
 
 function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const toggleButton = () => setOpen(!open);
+  const [scrolled, setScrolled] = useState(false);
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  // ✅ Only access document after mount
   useEffect(() => {
-    if (typeof document !== "undefined") {
-      if (darkMode) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    }
-  }, [darkMode]);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const { handleGoogleLogin, user, handleSingOut } = useContext(MyContext);
-  const { displayName, photoURL, emailVerified, email } = user || {};
+  const navLinks = [
+    { href: "/", label: "হোম" },
+    { href: "/about", label: "আমাদের সম্পর্কে" },
+    { href: "/services", label: "সেবাসমূহ" },
+    { href: "/portfolio", label: "পোর্টফোলিও" },
+    { href: "/contact", label: "যোগাযোগ" },
+  ];
 
   return (
-    <nav className="relative bg-primaryBg dark:bg-darkBackground shadow px-6 md:px-20 lg:px-28 py-4">
-      <div className="flex items-center justify-between lg:justify-between">
-        {/* Logo */}
-        <Link href={"/"}>
-          <Image
-            src="/logo_2.svg"
-            alt="Logo"
-            className="w-[150px] md:w-[180px] object-contain"
-            width={150}
-            height={50}
-          />
-        </Link>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "nav-glass shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 z-10 group">
+            <Zap className="w-7 h-7 text-[#0EA5E9] fill-[#0EA5E9]/20 group-hover:rotate-12 transition-transform duration-300" />
+            <span className="gradient-text text-3xl font-bold font-display tracking-tight">
+              Softiven
+            </span>
+          </Link>
 
-        {/* Desktop Links (centered) */}
-        <div className="hidden lg:flex justify-center items-center gap-8 font-semibold flex-1">
-          <NavLink href="/" label="Home" pathname={pathname} />
-          <NavLink href="/about" label="About" pathname={pathname} />
-          <NavLink href="/services" label="Services" pathname={pathname} />
-          <NavLink href="/portfolio" label="Portfolio" pathname={pathname} />
-          <NavLink href="/contact" label="Contact" pathname={pathname} />
-        </div>
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <NavLink key={link.href} href={link.href} label={link.label} pathname={pathname} />
+            ))}
+          </div>
 
-        {/* Right Side (login/get started) */}
-        <div className="hidden lg:flex items-center gap-4">
-          {emailVerified ? (
-            <div className="flex items-center gap-2">
-              <img
-                className="object-cover w-10 h-10 rounded-full ring ring-gray-300 dark:ring-gray-600"
-                src={photoURL}
-                alt=""
-              />
-              <button
-                onClick={handleSingOut}
-                className="text-gray-800 dark:text-darkText hover:text-primary font-semibold"
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
+          {/* Book Consultation CTA */}
+          <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="/login"
-              className="text-gray-800 dark:text-darkText hover:text-primary font-semibold"
+              href="/contact"
+              className="btn-primary text-sm font-bold"
+              id="book-consultation-desktop"
             >
-              Login
+              <FaCalendarAlt className="text-xs" />
+              পরামর্শ নিন
             </Link>
-          )}
-          <button className="px-3 py-2 border border-primary text-primary rounded-md transition-colors duration-300 hover:bg-primary hover:text-white font-semibold">
-            Get started
-          </button>
-        </div>
+          </div>
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
-          <button onClick={toggleButton} className="text-2xl text-gray-700">
-            <GiHamburgerMenu />
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex lg:hidden p-2 rounded-lg text-[#F1F5F9] hover:bg-white/10 transition-colors"
+            aria-label="Menu"
+          >
+            {open ? (
+              <IoClose className="text-2xl" />
+            ) : (
+              <GiHamburgerMenu className="text-2xl" />
+            )}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="flex flex-col items-center gap-4 mt-4 font-semibold text-lg lg:hidden">
-          <NavLink href="/" label="Home" pathname={pathname} />
-          <NavLink href="/about" label="About" pathname={pathname} />
-          <NavLink href="/services" label="Services" pathname={pathname} />
-          <NavLink href="/portfolio" label="Portfolio" pathname={pathname} />
-          <NavLink href="/contact" label="Contact" pathname={pathname} />
-
-          {emailVerified ? (
-            <button
-              onClick={handleSingOut}
-              className="text-gray-800 dark:text-darkText hover:text-primary font-semibold"
-            >
-              Logout
-            </button>
-          ) : (
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="nav-glass border-t border-white/5 px-6 py-6 flex flex-col gap-2">
+          {navLinks.map((link) => (
+            <NavLinkMobile
+              key={link.href}
+              href={link.href}
+              label={link.label}
+              pathname={pathname}
+              onClick={() => setOpen(false)}
+            />
+          ))}
+          <div className="pt-4 border-t border-white/10 mt-2">
             <Link
-              href="/login"
-              className="text-gray-800 dark:text-darkText hover:text-primary font-semibold"
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="btn-primary w-full justify-center text-sm font-bold"
+              id="book-consultation-mobile"
             >
-              Login
+              <FaCalendarAlt className="text-xs" />
+              পরামর্শ নিন
             </Link>
-          )}
-          <button className="px-3 py-2 border border-primary text-primary rounded-md transition-colors duration-300 hover:bg-primary hover:text-white font-semibold">
-            Get started
-          </button>
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
 
-// ✅ Small helper for nav links
 function NavLink({ href, label, pathname }) {
   const isActive = pathname === href;
   return (
     <Link
       href={href}
-      className={`px-3 py-2 text-gray-800 dark:text-darkText transition-colors duration-300 hover:text-primary ${
-        isActive ? "text-primary" : ""
+      className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group ${
+        isActive
+          ? "text-[#0EA5E9]"
+          : "text-[#94A3B8] hover:text-[#F1F5F9]"
+      }`}
+    >
+      {label}
+      <span
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full bg-gradient-to-r from-[#0EA5E9] to-[#6366F1] transition-all duration-300 ${
+          isActive ? "w-4/5" : "w-0 group-hover:w-3/5"
+        }`}
+      />
+    </Link>
+  );
+}
+
+function NavLinkMobile({ href, label, pathname, onClick }) {
+  const isActive = pathname === href;
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
+        isActive
+          ? "bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20"
+          : "text-[#94A3B8] hover:bg-white/5 hover:text-[#F1F5F9]"
       }`}
     >
       {label}
