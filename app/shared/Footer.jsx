@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Zap } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "হোম" },
@@ -26,7 +27,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1 space-y-6">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="flex items-center gap-2 group inline-flex">
+              <Zap className="w-7 h-7 text-[#0EA5E9] fill-[#0EA5E9]/20 group-hover:rotate-12 transition-transform duration-300" />
               <span className="gradient-text text-3xl font-bold font-display tracking-tight">
                 Softiven
               </span>

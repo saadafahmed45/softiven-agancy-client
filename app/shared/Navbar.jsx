@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { FaCalendarAlt } from "react-icons/fa";
+import { Zap } from "lucide-react";
 
 function Navbar() {
   const pathname = usePathname();
@@ -38,7 +39,8 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center z-10">
+          <Link href="/" className="flex items-center gap-2 z-10 group">
+            <Zap className="w-7 h-7 text-[#0EA5E9] fill-[#0EA5E9]/20 group-hover:rotate-12 transition-transform duration-300" />
             <span className="gradient-text text-3xl font-bold font-display tracking-tight">
               Softiven
             </span>
