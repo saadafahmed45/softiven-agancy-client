@@ -38,15 +38,13 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center z-10">
-            <Image
-              src="/logo_2.svg"
-              alt="Softiven Logo"
-              className="w-[140px] md:w-[160px] object-contain brightness-[5] contrast-[0.8]"
-              width={160}
-              height={48}
-              priority
-            />
+          <Link href="/" className="flex items-center gap-2 z-10 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_25px_rgba(14,165,233,0.7)] transition-all duration-300">
+              <span className="text-white font-bold text-2xl font-display leading-none">S</span>
+            </div>
+            <span className="text-2xl font-bold font-display tracking-tight text-[#F1F5F9]">
+              Softiven
+            </span>
           </Link>
 
           {/* Desktop Links */}

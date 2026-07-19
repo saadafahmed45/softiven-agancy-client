@@ -26,14 +26,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1 space-y-6">
-            <Link href="/">
-              <Image
-                className="h-auto w-[150px] brightness-[5] contrast-[0.8]"
-                src="/logo_2.svg"
-                alt="Softiven Logo"
-                width={150}
-                height={45}
-              />
+            <Link href="/" className="flex items-center gap-2 group inline-flex">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_25px_rgba(14,165,233,0.7)] transition-all duration-300">
+                <span className="text-white font-bold text-2xl font-display leading-none">S</span>
+              </div>
+              <span className="text-2xl font-bold font-display tracking-tight text-[#F1F5F9]">
+                Softiven
+              </span>
             </Link>
             <p className="text-[#64748B] text-sm leading-relaxed">
               Softiven — আপনার ব্যবসার বিশ্বস্ত ডিজিটাল পার্টনার। ওয়েবসাইট, Shopify
