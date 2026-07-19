@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.softiven.com';
+  const baseUrl = 'https://softiven-agancy.vercel.app';
   
   return [
     {

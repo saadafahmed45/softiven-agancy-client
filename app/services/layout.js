@@ -4,7 +4,7 @@ export const metadata = {
   openGraph: {
     title: 'আমাদের সেবাসমূহ | Softiven',
     description: 'ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন এবং Facebook মার্কেটিং সহ আমাদের ডিজিটাল সেবাসমূহ।',
-    url: 'https://www.softiven.com/services',
+    url: 'https://softiven-agancy.vercel.app/services',
   },
 };
 

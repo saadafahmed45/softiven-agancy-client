@@ -27,7 +27,7 @@ export const metadata = {
     title: "Softiven - আপনার ব্যবসার ডিজিটাল সমাধান",
     description:
       "ওয়েবসাইট তৈরি, Shopify স্টোর ও Facebook মার্কেটিং — সবকিছু এক জায়গায়।",
-    url: "https://www.softiven.com",
+    url: "https://softiven-agancy.vercel.app",
     images: "/logo_2.svg",
     locale: "bn_BD",
     type: "website",

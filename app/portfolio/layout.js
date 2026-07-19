@@ -4,7 +4,7 @@ export const metadata = {
   openGraph: {
     title: 'আমাদের পোর্টফোলিও | Softiven',
     description: 'Softiven এর তৈরি করা সফল ই-কমার্স, ওয়েবসাইট এবং মার্কেটিং প্রজেক্টের পোর্টফোলিও দেখুন।',
-    url: 'https://www.softiven.com/portfolio',
+    url: 'https://softiven-agancy.vercel.app/portfolio',
   },
 };
 

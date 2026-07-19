@@ -4,7 +4,7 @@ export const metadata = {
   openGraph: {
     title: 'আমাদের সম্পর্কে | Softiven',
     description: 'Softiven এর গল্প, আমাদের লক্ষ্য ও মূল্যবোধ সম্পর্কে জানুন।',
-    url: 'https://www.softiven.com/about',
+    url: 'https://softiven-agancy.vercel.app/about',
   },
 };
 

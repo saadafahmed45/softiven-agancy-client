@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/profile', '/login'], 
     },
-    sitemap: 'https://www.softiven.com/sitemap.xml',
+    sitemap: 'https://softiven-agancy.vercel.app/sitemap.xml',
   }
 }

@@ -4,7 +4,7 @@ export const metadata = {
   openGraph: {
     title: 'যোগাযোগ করুন | Softiven',
     description: 'আপনার ব্যবসার জন্য সঠিক ডিজিটাল সমাধান খুঁজে পেতে আমাদের সাথে যোগাযোগ করুন।',
-    url: 'https://www.softiven.com/contact',
+    url: 'https://softiven-agancy.vercel.app/contact',
   },
 };
 
