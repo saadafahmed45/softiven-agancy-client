@@ -1,12 +1,40 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const subject = `New contact request${formData.service ? ` - ${formData.service}` : ""}`;
+    const body = [
+      `Name: ${formData.name || "Not provided"}`,
+      `Email: ${formData.email || "Not provided"}`,
+      `Service: ${formData.service || "Not provided"}`,
+      "",
+      "Message:",
+      formData.message || "No message provided",
+    ].join("\n");
+
+    window.location.href = `mailto:mohammadhaolader1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   return (
     <div className="bg-[#0A0F1E] min-h-screen">
@@ -39,8 +67,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">ইমেইল</h3>
                     <p className="text-[#94A3B8] text-sm mb-2">আমাদের টিম দ্রুত আপনার ইমেইলের উত্তর দেবে।</p>
-                    <a href="mailto:info@softiven.com" className="text-[#0EA5E9] hover:text-[#22D3EE] font-medium transition-colors">
-                      info@softiven.com
+                    <a href="mailto:mohammadhaolader1@gmail.com" className="text-[#0EA5E9] hover:text-[#22D3EE] font-medium transition-colors">
+                      mohammadhaolader1@gmail.com
                     </a>
                   </div>
                 </div>
@@ -82,12 +110,15 @@ const Contact = () => {
               <div className="glass-card p-8 md:p-10 border border-[#0EA5E9]/20 h-full">
                 <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">আমাদের একটি বার্তা পাঠান</h3>
                 
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-[#94A3B8] mb-2">নাম</label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         placeholder="আপনার নাম"
                         className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
                       />
@@ -96,6 +127,9 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-[#94A3B8] mb-2">ইমেইল</label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="আপনার ইমেইল ঠিকানা"
                         className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
                       />
@@ -104,7 +138,12 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-[#94A3B8] mb-2">সেবার ধরন</label>
-                    <select className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all appearance-none">
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all appearance-none"
+                    >
                       <option value="">সেবা নির্বাচন করুন</option>
                       <option value="website">ওয়েবসাইট তৈরি</option>
                       <option value="shopify">Shopify স্টোর ডিজাইন</option>
@@ -117,13 +156,16 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-[#94A3B8] mb-2">বার্তা</label>
                     <textarea
                       rows={5}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="কিভাবে আমরা আপনাকে সাহায্য করতে পারি?"
                       className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all resize-none"
                     />
                   </div>
 
                   <button
-                    type="button"
+                    type="submit"
                     className="w-full btn-primary justify-center py-3.5 text-lg"
                   >
                     <FaPaperPlane />

@@ -13,7 +13,7 @@ const teamMembers = [
     social: {
       facebook: "https://www.facebook.com/softiven",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
   {
@@ -25,7 +25,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
   {
@@ -37,7 +37,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
   {
@@ -49,7 +49,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
   {
@@ -61,7 +61,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
   {
@@ -73,7 +73,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "info@softiven.com",
+      email: "mohammadhaolader1@gmail.com",
     },
   },
 ];

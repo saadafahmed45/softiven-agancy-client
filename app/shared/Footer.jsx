@@ -58,7 +58,7 @@ export default function Footer() {
                 <FaWhatsapp className="text-base" />
               </a>
               <a
-                href="mailto:info@softiven.com"
+                href="mailto:mohammadhaolader1@gmail.com"
                 aria-label="Softiven LinkedIn"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-[#0F172A] border border-[#1E293B] text-[#64748B] hover:text-[#6366F1] hover:border-[#6366F1]/40 hover:bg-[#6366F1]/10 transition-all duration-200"
               >
@@ -112,13 +112,13 @@ export default function Footer() {
             </p>
             <div className="space-y-4">
               <a
-                href="mailto:info@softiven.com"
+                href="mailto:mohammadhaolader1@gmail.com"
                 className="flex items-center gap-3 text-[#64748B] text-sm hover:text-[#0EA5E9] transition-colors duration-200 group"
               >
                 <div className="w-8 h-8 rounded-lg bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0EA5E9]/20">
                   <FaEnvelope className="text-[#0EA5E9] text-xs" />
                 </div>
-                info@softiven.com
+                mohammadhaolader1@gmail.com
               </a>
               <a
                 href="tel:+8801890195058"
