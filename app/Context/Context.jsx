@@ -50,6 +50,35 @@ const ContextProvider = ({ children }) => {
       });
   };
 
+  // Workaround: guard against DOM NotFoundError from removeChild in some runtimes
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const origRemoveChild = Node.prototype.removeChild;
+
+    function safeRemoveChild(child) {
+      try {
+        if (child && child.parentNode === this) {
+          return origRemoveChild.call(this, child);
+        }
+        // If it's not actually a child, silently ignore to avoid NotFoundError
+        return child;
+      } catch (err) {
+        // If it's a DOMException about not found, ignore; otherwise rethrow
+        if (err && err.name === "NotFoundError") {
+          return child;
+        }
+        throw err;
+      }
+    }
+
+    Node.prototype.removeChild = safeRemoveChild;
+
+    return () => {
+      Node.prototype.removeChild = origRemoveChild;
+    };
+  }, []);
+
   const { displayName, photoURL, emailVerified, email } = user;
 
   return (

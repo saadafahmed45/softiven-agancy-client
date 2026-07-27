@@ -56,8 +56,8 @@ export default function PortfolioPage() {
       {/* ── Hero Banner ── */}
       <section className="relative py-24 md:py-32 px-6 md:px-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="blob w-[500px] h-[500px] bg-[#0EA5E9] top-0 left-0" />
-          <div className="blob w-[400px] h-[400px] bg-[#6366F1] bottom-0 right-0" style={{ animationDelay: "3s" }} />
+          <div className="blob w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] bg-[#0EA5E9] top-0 left-0" />
+          <div className="blob w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-[#6366F1] bottom-0 right-0" style={{ animationDelay: "3s" }} />
         </div>
         <div className="relative max-w-4xl mx-auto text-center" data-aos="fade-up">
           <div className="section-badge mb-6">আমাদের পোর্টফোলিও</div>
@@ -179,7 +179,7 @@ export default function PortfolioPage() {
       {/* ── CTA ── */}
       <section className="py-20 px-6 md:px-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="blob w-[500px] h-[500px] bg-[#6366F1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+          <div className="blob w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] bg-[#6366F1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
         <div className="relative max-w-4xl mx-auto" data-aos="fade-up">
           <div className="glass-card p-12 text-center border border-[#0EA5E9]/20">

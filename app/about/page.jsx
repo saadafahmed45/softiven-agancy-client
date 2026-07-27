@@ -51,8 +51,8 @@ export default function AboutPage() {
       {/* ── Hero Banner ── */}
       <section className="relative py-24 md:py-32 px-6 md:px-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="blob w-[400px] h-[400px] bg-[#0EA5E9] top-0 right-0" />
-          <div className="blob w-[350px] h-[350px] bg-[#6366F1] bottom-0 left-0" style={{ animationDelay: "3s" }} />
+          <div className="blob w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-[#0EA5E9] top-0 right-0" />
+          <div className="blob w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] bg-[#6366F1] bottom-0 left-0" style={{ animationDelay: "3s" }} />
         </div>
         <div className="relative max-w-5xl mx-auto text-center" data-aos="fade-up">
           <div className="section-badge mb-6">আমাদের সম্পর্কে</div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 md:px-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-cta opacity-10 pointer-events-none" />
         <div className="absolute inset-0 pointer-events-none">
-          <div className="blob w-[400px] h-[400px] bg-[#6366F1] top-0 left-1/2 -translate-x-1/2" />
+          <div className="blob w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-[#6366F1] top-0 left-1/2 -translate-x-1/2" />
         </div>
         <div className="relative max-w-4xl mx-auto text-center" data-aos="fade-up">
           <div className="glass-card p-12 border border-[#0EA5E9]/20">

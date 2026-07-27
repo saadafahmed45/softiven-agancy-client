@@ -9,11 +9,11 @@ const Cta = () => {
       {/* Blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="blob w-[600px] h-[600px] bg-[#0EA5E9] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="blob w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[600px] lg:h-[600px] bg-[#0EA5E9] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{ opacity: 0.12 }}
         />
-        <div className="blob w-[300px] h-[300px] bg-[#6366F1] top-0 right-0" style={{ opacity: 0.1, animationDelay: "2s" }} />
-        <div className="blob w-[250px] h-[250px] bg-[#22D3EE] bottom-0 left-0" style={{ opacity: 0.1, animationDelay: "4s" }} />
+        <div className="blob w-[140px] h-[140px] sm:w-[200px] sm:h-[200px] md:w-[260px] md:h-[260px] bg-[#6366F1] top-0 right-0" style={{ opacity: 0.1, animationDelay: "2s" }} />
+        <div className="blob w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[220px] md:h-[220px] bg-[#22D3EE] bottom-0 left-0" style={{ opacity: 0.1, animationDelay: "4s" }} />
       </div>
 
       <div className="relative max-w-5xl mx-auto">
