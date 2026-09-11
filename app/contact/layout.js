@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'যোগাযোগ করুন | Softiven',
-  description: 'আপনার ব্যবসার জন্য সঠিক ডিজিটাল সমাধান খুঁজে পেতে আমাদের সাথে যোগাযোগ করুন। আমরা আপনার সাহায্যে সর্বদা প্রস্তুত।',
+  title: 'Contact Us | Softiven',
+  description: 'Get in touch with us to find the right digital solution for your business. We are always ready to help you.',
   openGraph: {
-    title: 'যোগাযোগ করুন | Softiven',
-    description: 'আপনার ব্যবসার জন্য সঠিক ডিজিটাল সমাধান খুঁজে পেতে আমাদের সাথে যোগাযোগ করুন।',
+    title: 'Contact Us | Softiven',
+    description: 'Get in touch with us to find the right digital solution for your business.',
     url: 'https://softiven-agancy.vercel.app/contact',
   },
 };

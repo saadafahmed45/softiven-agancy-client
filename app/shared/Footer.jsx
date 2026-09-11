@@ -4,19 +4,19 @@ import { FaFacebook, FaLinkedin, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarker
 import { Zap } from "lucide-react";
 
 const quickLinks = [
-  { href: "/", label: "হোম" },
-  { href: "/about", label: "আমাদের সম্পর্কে" },
-  { href: "/services", label: "সেবাসমূহ" },
-  { href: "/portfolio", label: "পোর্টফোলিও" },
-  { href: "/contact", label: "যোগাযোগ" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const serviceLinks = [
-  { href: "/services", label: "ওয়েবসাইট তৈরি" },
-  { href: "/services", label: "Shopify স্টোর ডিজাইন" },
-  { href: "/services", label: "Facebook মার্কেটিং" },
-  { href: "/services", label: "ব্র্যান্ড ডিজাইন" },
-  { href: "/services", label: "SEO সেবা" },
+  { href: "/services", label: "Website Development" },
+  { href: "/services", label: "Shopify Store Design" },
+  { href: "/services", label: "Facebook Marketing" },
+  { href: "/services", label: "Brand Design" },
+  { href: "/services", label: "SEO Services" },
 ];
 
 export default function Footer() {
@@ -27,15 +27,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group inline-flex">
+            <Link href="/" className="inline-flex items-center gap-2 group">
               <Zap className="w-7 h-7 text-[#0EA5E9] fill-[#0EA5E9]/20 group-hover:rotate-12 transition-transform duration-300" />
               <span className="gradient-text text-3xl font-bold font-display tracking-tight">
                 Softiven
               </span>
             </Link>
             <p className="text-[#64748B] text-sm leading-relaxed">
-              Softiven — আপনার ব্যবসার বিশ্বস্ত ডিজিটাল পার্টনার। ওয়েবসাইট, Shopify
-              ও Facebook মার্কেটিংয়ে আমরা আপনার পাশে।
+              Softiven — your business's trusted digital partner. We are
+              with you in websites, Shopify, and Facebook marketing.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
-              দ্রুত লিংক
+              Quick Links
             </p>
             <div className="flex flex-col gap-3">
               {quickLinks.map((link) => (
@@ -89,7 +89,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
-              আমাদের সেবা
+              Our Services
             </p>
             <div className="flex flex-col gap-3">
               {serviceLinks.map((link) => (
@@ -108,7 +108,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p className="text-[#F1F5F9] font-semibold mb-6 text-base">
-              যোগাযোগ করুন
+              Contact Us
             </p>
             <div className="space-y-4">
               <a
@@ -133,7 +133,7 @@ export default function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <FaMapMarkerAlt className="text-[#6366F1] text-xs" />
                 </div>
-                ঢাকা, বাংলাদেশ
+                Dhaka, Bangladesh
               </div>
             </div>
 
@@ -143,7 +143,7 @@ export default function Footer() {
               className="mt-6 w-full btn-primary text-sm justify-center"
               id="footer-book-consultation"
             >
-              পরামর্শ নিন
+              Book a Consultation
             </Link>
           </div>
         </div>
@@ -156,10 +156,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#475569] text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} Softiven. সর্বস্বত্ব সংরক্ষিত।
+            © {new Date().getFullYear()} Softiven. All rights reserved.
           </p>
           <p className="text-[#475569] text-sm text-center">
-            ❤️ দিয়ে তৈরি করেছে{" "}
+            Made with ❤️{" "}
             <span className="gradient-text font-semibold">Softiven Team</span>
           </p>
         </div>

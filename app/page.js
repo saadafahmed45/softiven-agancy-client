@@ -14,9 +14,9 @@ export default function Home() {
       <FloatingWhatsApp
         phoneNumber="+8801890195058"
         accountName="Softiven Team"
-        chatMessage="হ্যালো! আমরা কীভাবে আপনাকে সাহায্য করতে পারি? 😊"
-        statusMessage="সাধারণত ১ ঘণ্টার মধ্যে উত্তর দেওয়া হয়"
-        placeholder="আপনার বার্তা লিখুন..."
+        chatMessage="Hello! How can we help you? 😊"
+        statusMessage="Usually replies within 1 hour"
+        placeholder="Write your message..."
         notification
         notificationSound
         notificationDelay={60}

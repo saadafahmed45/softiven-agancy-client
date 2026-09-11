@@ -17,26 +17,26 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Softiven - ওয়েবসাইট, Shopify স্টোর ও Facebook মার্কেটিং এজেন্সি",
+  title: "Softiven - Website, Shopify Store & Facebook Marketing Agency",
   description:
-    "Softiven আপনার ব্যবসার জন্য প্রফেশনাল ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন ও ডেভেলপমেন্ট এবং Facebook মার্কেটিং সেবা প্রদান করে। আপনার ব্যবসাকে ডিজিটালে নিয়ে যান।",
+    "Softiven provides professional website development, Shopify store design & development, and Facebook marketing services for your business. Take your business digital.",
   keywords:
-    "ওয়েবসাইট তৈরি, Shopify স্টোর, Facebook মার্কেটিং, ডিজিটাল মার্কেটিং, বাংলাদেশ, ব্যবসায়িক সমাধান, Softiven",
+    "website development, Shopify store, Facebook marketing, digital marketing, Bangladesh, business solutions, Softiven",
   authors: [{ name: "Softiven Team" }],
   openGraph: {
-    title: "Softiven - আপনার ব্যবসার ডিজিটাল সমাধান",
+    title: "Softiven - Digital Solutions for Your Business",
     description:
-      "ওয়েবসাইট তৈরি, Shopify স্টোর ও Facebook মার্কেটিং — সবকিছু এক জায়গায়।",
+      "Website development, Shopify store & Facebook marketing — everything in one place.",
     url: "https://softiven-agancy.vercel.app",
     images: "/logo_2.svg",
-    locale: "bn_BD",
+    locale: "en_US",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="bn">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

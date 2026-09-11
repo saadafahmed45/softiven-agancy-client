@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'আমাদের সেবাসমূহ | Softiven',
-  description: 'ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন এবং Facebook মার্কেটিং সহ আপনার ব্যবসার জন্য আমাদের প্রিমিয়াম ডিজিটাল সেবাসমূহ দেখুন।',
+  title: 'Our Services | Softiven',
+  description: 'Explore our premium digital services for your business, including website development, Shopify store design, and Facebook marketing.',
   openGraph: {
-    title: 'আমাদের সেবাসমূহ | Softiven',
-    description: 'ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন এবং Facebook মার্কেটিং সহ আমাদের ডিজিটাল সেবাসমূহ।',
+    title: 'Our Services | Softiven',
+    description: 'Website development, Shopify store design, and Facebook marketing — our digital services.',
     url: 'https://softiven-agancy.vercel.app/services',
   },
 };

@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'আমাদের সম্পর্কে | Softiven',
-  description: 'Softiven এর গল্প, আমাদের লক্ষ্য ও মূল্যবোধ সম্পর্কে জানুন। আমরা আপনার ব্যবসাকে ডিজিটাল বিশ্বে এগিয়ে নিতে সাহায্য করি।',
+  title: 'About Us | Softiven',
+  description: "Learn about Softiven's story, our mission, and our values. We help take your business forward in the digital world.",
   openGraph: {
-    title: 'আমাদের সম্পর্কে | Softiven',
-    description: 'Softiven এর গল্প, আমাদের লক্ষ্য ও মূল্যবোধ সম্পর্কে জানুন।',
+    title: 'About Us | Softiven',
+    description: "Learn about Softiven's story, our mission, and our values.",
     url: 'https://softiven-agancy.vercel.app/about',
   },
 };

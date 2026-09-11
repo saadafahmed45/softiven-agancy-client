@@ -24,23 +24,23 @@ const Cta = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 section-badge mb-6">
             <HiSparkles />
-            বিনামূল্যে পরামর্শ
+            Free Consultation
           </div>
 
           {/* Headline */}
           <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] leading-tight mb-6">
-            আপনার ব্যবসাকে পরবর্তী স্তরে{" "}
-            <span className="gradient-text">নিয়ে যেতে প্রস্তুত?</span>
+            Ready to Take Your Business{" "}
+            <span className="gradient-text">to the Next Level?</span>
           </h2>
 
           {/* Description */}
           <p className="text-[#94A3B8] text-base md:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
-            আমরা আপনার ব্যবসার জন্য কাস্টম ডিজিটাল সমাধান তৈরি করতে প্রস্তুত।
-            ওয়েবসাইট, Shopify স্টোর, Facebook মার্কেটিং — যাই হোক না কেন,
-            আমরা আপনার পাশে আছি।
+            We are ready to build a custom digital solution for your business.
+            Website, Shopify store, Facebook marketing — whatever it is,
+            we've got you covered.
           </p>
           <p className="text-[#64748B] text-sm mb-10">
-            আজই যোগাযোগ করুন এবং প্রথম পরামর্শটি সম্পূর্ণ বিনামূল্যে পান!
+            Contact us today and get your first consultation completely free!
           </p>
 
           {/* CTAs */}
@@ -51,20 +51,20 @@ const Cta = () => {
               id="cta-book-consultation"
             >
               <FaCalendarAlt />
-              বিনামূল্যে পরামর্শ নিন
+              Get a Free Consultation
             </Link>
             <a
               href="tel:+8801890195058"
               className="btn-outline text-base w-full sm:w-auto justify-center"
             >
               <FaPhoneAlt className="text-xs" />
-              এখনই কল করুন
+              Call Now
             </a>
           </div>
 
           {/* Trust note */}
           <p className="text-[#475569] text-xs mt-8">
-            ✓ কোনো লুকানো চার্জ নেই &nbsp;|&nbsp; ✓ দ্রুত রেসপন্স &nbsp;|&nbsp; ✓ বিশেষজ্ঞ পরামর্শ
+            ✓ No hidden charges &nbsp;|&nbsp; ✓ Fast response &nbsp;|&nbsp; ✓ Expert advice
           </p>
 
           {/* Bottom shimmer */}

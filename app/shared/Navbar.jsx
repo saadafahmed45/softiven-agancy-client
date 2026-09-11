@@ -21,11 +21,11 @@ function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "হোম" },
-    { href: "/about", label: "আমাদের সম্পর্কে" },
-    { href: "/services", label: "সেবাসমূহ" },
-    { href: "/portfolio", label: "পোর্টফোলিও" },
-    { href: "/contact", label: "যোগাযোগ" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -61,7 +61,7 @@ function Navbar() {
               id="book-consultation-desktop"
             >
               <FaCalendarAlt className="text-xs" />
-              পরামর্শ নিন
+              Book a Consultation
             </Link>
           </div>
 
@@ -104,7 +104,7 @@ function Navbar() {
               id="book-consultation-mobile"
             >
               <FaCalendarAlt className="text-xs" />
-              পরামর্শ নিন
+              Book a Consultation
             </Link>
           </div>
         </div>
