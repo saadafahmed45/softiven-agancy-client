@@ -41,7 +41,8 @@ const Hero = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    setVisible(true);
+    const frame = requestAnimationFrame(() => setVisible(true));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (

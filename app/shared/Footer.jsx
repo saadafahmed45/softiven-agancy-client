@@ -34,7 +34,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[#64748B] text-sm leading-relaxed">
-              Softiven — your business's trusted digital partner. We are
+              Softiven — your business&apos;s trusted digital partner. We are
               with you in websites, Shopify, and Facebook marketing.
             </p>
             {/* Social links */}

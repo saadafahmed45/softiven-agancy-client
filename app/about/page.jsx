@@ -57,7 +57,7 @@ export default function AboutPage() {
         <div className="relative max-w-5xl mx-auto text-center" data-aos="fade-up">
           <div className="section-badge mb-6">About Us</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F1F5F9] leading-tight mb-6">
-            Your Business's{" "}
+            Your Business&apos;s{" "}
             <span className="gradient-text">Digital Partner</span>
           </h1>
           <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
@@ -204,7 +204,7 @@ export default function AboutPage() {
           <div className="glass-card p-12 border border-[#0EA5E9]/20">
             <div className="shimmer-line mb-8" />
             <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] mb-6">
-              Start Your Business's{" "}
+              Start Your Business&apos;s{" "}
               <span className="gradient-text">Digital Journey Today</span>
             </h2>
             <p className="text-[#94A3B8] text-lg mb-8 max-w-2xl mx-auto">

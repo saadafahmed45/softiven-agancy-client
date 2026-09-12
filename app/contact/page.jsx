@@ -1,7 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import { FaCheckCircle, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+
+const EMAIL = "mohammadhaolader1@gmail.com";
+
+const SERVICE_LABELS = {
+  website: "Website Development",
+  shopify: "Shopify Store Design",
+  marketing: "Facebook Marketing",
+  other: "Other",
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,30 +19,78 @@ const Contact = () => {
     service: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState("idle"); // idle | opening | sent
+  const sentTimerRef = useRef(null);
 
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
 
+  useEffect(() => () => clearTimeout(sentTimerRef.current), []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Clear the field error and the "sent" notice as soon as the user edits again
+    if (errors[name]) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
+    if (status === "sent") {
+      setStatus("idle");
+    }
+  };
+
+  const validate = () => {
+    const next = {};
+    if (!formData.name.trim()) {
+      next.name = "Please enter your name.";
+    }
+    if (!formData.email.trim()) {
+      next.email = "Please enter your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      next.email = "Please enter a valid email address.";
+    }
+    if (!formData.message.trim()) {
+      next.message = "Please write a short message.";
+    }
+    return next;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const subject = `New contact request${formData.service ? ` - ${formData.service}` : ""}`;
+    const nextErrors = validate();
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) return;
+
+    const serviceLabel = SERVICE_LABELS[formData.service];
+    const subject = `New contact request${serviceLabel ? ` - ${serviceLabel}` : ""}`;
     const body = [
-      `Name: ${formData.name || "Not provided"}`,
-      `Email: ${formData.email || "Not provided"}`,
-      `Service: ${formData.service || "Not provided"}`,
+      `Name: ${formData.name.trim()}`,
+      `Email: ${formData.email.trim()}`,
+      `Service: ${serviceLabel || "Not specified"}`,
       "",
       "Message:",
-      formData.message || "No message provided",
+      formData.message.trim(),
     ].join("\n");
 
-    window.location.href = `mailto:mohammadhaolader1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Keep a copy on the clipboard so the visitor still has the message
+    // even if no email app is installed on their device.
+    const summary = `To: ${EMAIL}\nSubject: ${subject}\n\n${body}`;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(summary).catch(() => {});
+    }
+
+    setStatus("opening");
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    sentTimerRef.current = window.setTimeout(() => setStatus("sent"), 1200);
   };
 
   return (
@@ -116,35 +173,62 @@ const Contact = () => {
               <div className="glass-card p-8 md:p-10 border border-[#0EA5E9]/20 h-full">
                 <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">Send Us a Message</h3>
                 
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">Name</label>
+                      <label htmlFor="contact-name" className="block text-sm font-medium text-[#94A3B8] mb-2">
+                        Name <span className="text-[#0EA5E9]">*</span>
+                      </label>
                       <input
+                        id="contact-name"
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your name"
-                        className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
+                        aria-required="true"
+                        aria-invalid={Boolean(errors.name)}
+                        aria-describedby={errors.name ? "contact-name-error" : undefined}
+                        className={`w-full px-4 py-3 bg-[#0F172A] border rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:ring-1 transition-all ${
+                          errors.name
+                            ? "border-rose-500/70 focus:border-rose-500 focus:ring-rose-500"
+                            : "border-[#1E293B] focus:border-[#0EA5E9] focus:ring-[#0EA5E9]"
+                        }`}
                       />
+                      {errors.name && (
+                        <p id="contact-name-error" className="mt-1.5 text-sm text-rose-400">{errors.name}</p>
+                      )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">Email</label>
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-[#94A3B8] mb-2">
+                        Email <span className="text-[#0EA5E9]">*</span>
+                      </label>
                       <input
+                        id="contact-email"
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Your email address"
-                        className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
+                        aria-required="true"
+                        aria-invalid={Boolean(errors.email)}
+                        aria-describedby={errors.email ? "contact-email-error" : undefined}
+                        className={`w-full px-4 py-3 bg-[#0F172A] border rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:ring-1 transition-all ${
+                          errors.email
+                            ? "border-rose-500/70 focus:border-rose-500 focus:ring-rose-500"
+                            : "border-[#1E293B] focus:border-[#0EA5E9] focus:ring-[#0EA5E9]"
+                        }`}
                       />
+                      {errors.email && (
+                        <p id="contact-email-error" className="mt-1.5 text-sm text-rose-400">{errors.email}</p>
+                      )}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">Service Type</label>
+                    <label htmlFor="contact-service" className="block text-sm font-medium text-[#94A3B8] mb-2">Service Type</label>
                     <select
+                      id="contact-service"
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
@@ -159,24 +243,55 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">Message</label>
+                    <label htmlFor="contact-message" className="block text-sm font-medium text-[#94A3B8] mb-2">
+                      Message <span className="text-[#0EA5E9]">*</span>
+                    </label>
                     <textarea
+                      id="contact-message"
                       rows={5}
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="How can we help you?"
-                      className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all resize-none"
+                      aria-required="true"
+                      aria-invalid={Boolean(errors.message)}
+                      aria-describedby={errors.message ? "contact-message-error" : undefined}
+                      className={`w-full px-4 py-3 bg-[#0F172A] border rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:ring-1 transition-all resize-none ${
+                        errors.message
+                          ? "border-rose-500/70 focus:border-rose-500 focus:ring-rose-500"
+                          : "border-[#1E293B] focus:border-[#0EA5E9] focus:ring-[#0EA5E9]"
+                      }`}
                     />
+                    {errors.message && (
+                      <p id="contact-message-error" className="mt-1.5 text-sm text-rose-400">{errors.message}</p>
+                    )}
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full btn-primary justify-center py-3.5 text-lg"
+                    disabled={status === "opening"}
+                    className="w-full btn-primary justify-center py-3.5 text-lg disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <FaPaperPlane />
-                    Send Message
+                    <FaPaperPlane className={status === "opening" ? "animate-pulse" : ""} />
+                    {status === "opening" ? "Opening your email app..." : "Send Message"}
                   </button>
+
+                  {status === "sent" && (
+                    <div
+                      role="status"
+                      className="flex items-start gap-3 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm leading-relaxed"
+                    >
+                      <FaCheckCircle className="mt-0.5 flex-shrink-0" />
+                      <p>
+                        Your email app should have opened with your message ready to send. If it did not
+                        open, no worries — we saved a copy to your clipboard. Paste it into a new email to{" "}
+                        <a href={`mailto:${EMAIL}`} className="underline underline-offset-2 hover:text-emerald-200">
+                          {EMAIL}
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { portfolioData } from "./data";
 
 export default function PortfolioPage() {
@@ -127,7 +128,7 @@ export default function PortfolioPage() {
                         rel="noopener noreferrer"
                         className="w-10 h-10 rounded-full bg-[#0F172A]/80 backdrop-blur-md flex items-center justify-center border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#6366F1]"
                       >
-                        <Github className="w-5 h-5" />
+                        <FaGithub className="w-5 h-5" />
                       </Link>
                     ) : null}
                   </div>

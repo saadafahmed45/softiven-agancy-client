@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { MyContext } from '../Context/Context';
 import { useRouter } from 'next/navigation';
 
@@ -13,10 +13,11 @@ const ProfilePage = () => {
 
     const router = useRouter();
 
-    if (user.emailVerified !== true) {
-
-        router.push("/login");
-    }
+    useEffect(() => {
+        if (user.emailVerified !== true) {
+            router.push("/login");
+        }
+    }, [user, router]);
 
     return (
         <div className='h-screen flex items-start   py-16 justify-center '>

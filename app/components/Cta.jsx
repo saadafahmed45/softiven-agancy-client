@@ -37,7 +37,7 @@ const Cta = () => {
           <p className="text-[#94A3B8] text-base md:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
             We are ready to build a custom digital solution for your business.
             Website, Shopify store, Facebook marketing — whatever it is,
-            we've got you covered.
+            we&apos;ve got you covered.
           </p>
           <p className="text-[#64748B] text-sm mb-10">
             Contact us today and get your first consultation completely free!

@@ -14,36 +14,47 @@ const gradients = [
 
 const teamMembers = [
   {
-    name: "Saad Ahmed",
+    name: "Mohammad Haolader",
     role: "Founder & CEO",
     bio: "Skilled entrepreneur with 5+ years of experience in web development and digital marketing.",
     color: "#0EA5E9",
     social: {
       facebook: "https://www.facebook.com/softiven",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/mohammadh-",
       email: "mohammadhaolader1@gmail.com",
     },
   },
+    {
+    name: "Asraful Islam",
+    role: "Full-Stack Developer",
+    bio: "Skilled developer in React, Next.js, and Node.js. Has the remarkable ability to complete complex projects with ease.",
+    color: "#10B981",
+    social: {
+      facebook: "https://www.facebook.com/asraful.islam.9083",
+      linkedin: "https://www.linkedin.com/in/asraful-islam-26a214160/",
+      email: "iasraful321@gmail.com",
+    },
+  },
   {
-    name: "Rahela Begum",
-    role: "Lead Designer",
+    name: "Safa Khan",
+    role: "UI/UX Designer",
     bio: "Expert in UI/UX design and brand identity creation. Designs with a perfect blend of aesthetics and functionality.",
     color: "#6366F1",
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "mohammadhaolader1@gmail.com",
+      email: "safakhan432@gmail.com",
     },
   },
   {
-    name: "Tanvir Hossain",
+    name: "Toyayel Ahmed",
     role: "Shopify Expert",
     bio: "4+ years of experience in Shopify store design and development. Skilled professional in e-commerce solutions.",
     color: "#22D3EE",
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "mohammadhaolader1@gmail.com",
+      email: "toyayelahmed12@gmail.com",
     },
   },
   {
@@ -54,20 +65,10 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "mohammadhaolader1@gmail.com",
+      email: "nafisa.islam@gmail.com",
     },
   },
-  {
-    name: "Mahmud Reza",
-    role: "Full-Stack Developer",
-    bio: "Skilled developer in React, Next.js, and Node.js. Has the remarkable ability to complete complex projects with ease.",
-    color: "#10B981",
-    social: {
-      facebook: "#",
-      linkedin: "#",
-      email: "mohammadhaolader1@gmail.com",
-    },
-  },
+
   {
     name: "Sumaiya Khan",
     role: "Content Strategist",
@@ -76,7 +77,7 @@ const teamMembers = [
     social: {
       facebook: "#",
       linkedin: "#",
-      email: "mohammadhaolader1@gmail.com",
+      email: "sumaiyakhanchoiti2@gmail.com",
     },
   },
 ];

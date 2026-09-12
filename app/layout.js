@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://softiven-agancy.vercel.app"),
   title: "Softiven - Website, Shopify Store & Facebook Marketing Agency",
   description:
     "Softiven provides professional website development, Shopify store design & development, and Facebook marketing services for your business. Take your business digital.",
@@ -36,7 +37,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0A0F1E] text-[#F1F5F9]`}
       >
         <ContextProvider>
