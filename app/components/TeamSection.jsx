@@ -3,12 +3,20 @@ import { useEffect } from "react";
 import AOS from "aos";
 import { FaFacebook, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+const gradients = [
+  "from-[#0EA5E9] to-[#6366F1]",
+  "from-[#6366F1] to-[#C084FC]",
+  "from-[#22D3EE] to-[#0EA5E9]",
+  "from-[#EC4899] to-[#6366F1]",
+  "from-[#10B981] to-[#22D3EE]",
+  "from-[#F59E0B] to-[#EF4444]",
+];
+
 const teamMembers = [
   {
     name: "Saad Ahmed",
     role: "Founder & CEO",
     bio: "Skilled entrepreneur with 5+ years of experience in web development and digital marketing.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80&auto=format&fit=crop",
     color: "#0EA5E9",
     social: {
       facebook: "https://www.facebook.com/softiven",
@@ -20,7 +28,6 @@ const teamMembers = [
     name: "Rahela Begum",
     role: "Lead Designer",
     bio: "Expert in UI/UX design and brand identity creation. Designs with a perfect blend of aesthetics and functionality.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80&auto=format&fit=crop",
     color: "#6366F1",
     social: {
       facebook: "#",
@@ -32,7 +39,6 @@ const teamMembers = [
     name: "Tanvir Hossain",
     role: "Shopify Expert",
     bio: "4+ years of experience in Shopify store design and development. Skilled professional in e-commerce solutions.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80&auto=format&fit=crop",
     color: "#22D3EE",
     social: {
       facebook: "#",
@@ -44,7 +50,6 @@ const teamMembers = [
     name: "Nafisa Islam",
     role: "Facebook Marketing Expert",
     bio: "Expert in targeted Facebook advertising and social media marketing. Proven ability to increase client ROI.",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80&auto=format&fit=crop",
     color: "#EC4899",
     social: {
       facebook: "#",
@@ -56,7 +61,6 @@ const teamMembers = [
     name: "Mahmud Reza",
     role: "Full-Stack Developer",
     bio: "Skilled developer in React, Next.js, and Node.js. Has the remarkable ability to complete complex projects with ease.",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80&auto=format&fit=crop",
     color: "#10B981",
     social: {
       facebook: "#",
@@ -68,7 +72,6 @@ const teamMembers = [
     name: "Sumaiya Khan",
     role: "Content Strategist",
     bio: "Expert in creating engaging content and SEO strategy. Presents your brand story in an attractive way.",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&q=80&auto=format&fit=crop",
     color: "#F59E0B",
     social: {
       facebook: "#",
@@ -120,12 +123,13 @@ const TeamSection = () => {
                   className="absolute inset-0 rounded-full blur-lg opacity-30 scale-110"
                   style={{ background: member.color }}
                 />
-                <img
-                  className="relative w-24 h-24 rounded-full object-cover ring-4 ring-[#1E293B] group-hover:ring-opacity-60 transition-all duration-300"
-                  style={{ "--tw-ring-color": member.color }}
-                  src={member.avatar}
-                  alt={member.name}
-                />
+                <div
+                  className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${gradients[i]} flex items-center justify-center ring-4 ring-[#1E293B] group-hover:ring-opacity-60 transition-all duration-300`}
+                >
+                  <span className="text-3xl font-bold text-white">
+                    {member.name.charAt(0).toUpperCase()}
+                  </span>
+                </div>
                 {/* Online indicator */}
                 <span
                   className="absolute bottom-1 right-1 w-4 h-4 rounded-full border-2 border-[#0F172A]"
