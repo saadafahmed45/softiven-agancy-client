@@ -23,17 +23,17 @@ function useCounter(target, duration = 2000, start = false) {
 }
 
 const stats = [
-  { value: 150, suffix: "+", label: "সন্তুষ্ট ক্লায়েন্ট" },
-  { value: 200, suffix: "+", label: "সফল প্রজেক্ট" },
-  { value: 4, suffix: "+", label: "বছরের অভিজ্ঞতা" },
-  { value: 98, suffix: "%", label: "সাফল্যের হার" },
+  { value: 150, suffix: "+", label: "Satisfied Clients" },
+  { value: 200, suffix: "+", label: "Successful Projects" },
+  { value: 4, suffix: "+", label: "Years of Experience" },
+  { value: 98, suffix: "%", label: "Success Rate" },
 ];
 
 const highlights = [
-  "প্রফেশনাল ওয়েবসাইট ডিজাইন",
-  "Shopify স্টোর সেটআপ",
-  "Facebook বিজ্ঞাপন পরিচালনা",
-  "২৪/৭ সাপোর্ট",
+  "Professional Website Design",
+  "Shopify Store Setup",
+  "Facebook Ads Management",
+  "24/7 Support",
 ];
 
 const Hero = () => {
@@ -82,20 +82,19 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 section-badge">
               <HiSparkles className="text-[#0EA5E9]" />
-              <span>বাংলাদেশের বিশ্বস্ত ডিজিটাল এজেন্সি</span>
+              <span>Trusted Digital Agency in Bangladesh</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#F1F5F9]">
-              আপনার ব্যবসাকে{" "}
-              <span className="gradient-text">ডিজিটালে</span>{" "}
-              নিয়ে যান
+              Take Your Business{" "}
+              <span className="gradient-text">Digital</span>
             </h1>
 
             {/* Sub-headline */}
             <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed max-w-xl">
-              আমরা প্রফেশনাল ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন ও ডেভেলপমেন্ট এবং{" "}
-              Facebook মার্কেটিং সেবা দিয়ে আপনার ব্যবসাকে সাফল্যের পথে নিয়ে যাই।
+              We build professional websites, design and develop Shopify stores, and{" "}
+              provide Facebook marketing services to drive your business to success.
             </p>
 
             {/* Highlights */}
@@ -115,10 +114,10 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link href="/contact" className="btn-primary text-base" id="hero-book-consultation">
                 <FaCalendarAlt />
-                বিনামূল্যে পরামর্শ নিন
+                Get Free Consultation
               </Link>
               <Link href="/portfolio" className="btn-outline text-base">
-                আমাদের কাজ দেখুন
+                See Our Work
                 <FaArrowRight className="text-xs" />
               </Link>
             </div>
@@ -145,16 +144,16 @@ const Hero = () => {
               {/* Service chips */}
               <div className="space-y-3">
                 <p className="text-[#64748B] text-xs font-semibold uppercase tracking-widest">
-                  আমাদের সেবাসমূহ
+                  OUR SERVICES
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "ওয়েবসাইট তৈরি",
-                    "Shopify স্টোর",
-                    "Facebook মার্কেটিং",
-                    "ব্র্যান্ড ডিজাইন",
-                    "SEO অপটিমাইজেশন",
-                    "ই-কমার্স সমাধান",
+                    "Website Development",
+                    "Shopify Store",
+                    "Facebook Marketing",
+                    "Brand Design",
+                    "SEO Optimization",
+                    "E-Commerce Solutions",
                   ].map((tag) => (
                     <span
                       key={tag}
@@ -173,8 +172,8 @@ const Hero = () => {
             {/* Floating badge */}
             <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] rounded-2xl p-4 shadow-glow animate-float">
               <div className="text-center text-white">
-                <p className="text-2xl font-bold">৯৮%</p>
-                <p className="text-xs opacity-90">ক্লায়েন্ট সন্তুষ্টি</p>
+                <p className="text-2xl font-bold">98%</p>
+                <p className="text-xs opacity-90">Client Satisfaction</p>
               </div>
             </div>
 
@@ -188,8 +187,8 @@ const Hero = () => {
                   ✓
                 </div>
                 <div>
-                  <p className="text-[#F1F5F9] text-sm font-semibold">প্রজেক্ট সম্পন্ন</p>
-                  <p className="text-[#0EA5E9] text-xs font-bold">২০০+ সফল প্রজেক্ট</p>
+                  <p className="text-[#F1F5F9] text-sm font-semibold">Projects Completed</p>
+                  <p className="text-[#0EA5E9] text-xs font-bold">200+ Successful Projects</p>
                 </div>
               </div>
             </div>

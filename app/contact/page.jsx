@@ -47,12 +47,12 @@ const Contact = () => {
         
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center" data-aos="fade-up">
-            <div className="section-badge mb-6">যোগাযোগ করুন</div>
+            <div className="section-badge mb-6">Get In Touch</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F1F5F9] leading-tight mb-6">
-              আমাদের সাথে <span className="gradient-text">কথা বলুন</span>
+              Talk to <span className="gradient-text">Us</span>
             </h1>
             <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-              আপনার ব্যবসার জন্য সঠিক ডিজিটাল সমাধান খুঁজে পেতে আমাদের বন্ধুত্বপূর্ণ টিমের সাথে যোগাযোগ করুন।
+              Contact our friendly team to find the right digital solution for your business.
             </p>
           </div>
 
@@ -65,8 +65,8 @@ const Contact = () => {
                     <FaEnvelope className="text-[#0EA5E9] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">ইমেইল</h3>
-                    <p className="text-[#94A3B8] text-sm mb-2">আমাদের টিম দ্রুত আপনার ইমেইলের উত্তর দেবে।</p>
+                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">Email</h3>
+                    <p className="text-[#94A3B8] text-sm mb-2">Our team will respond to your email promptly.</p>
                     <a href="mailto:mohammadhaolader1@gmail.com" className="text-[#0EA5E9] hover:text-[#22D3EE] font-medium transition-colors">
                       mohammadhaolader1@gmail.com
                     </a>
@@ -80,10 +80,13 @@ const Contact = () => {
                     <FaPhoneAlt className="text-[#6366F1] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">ফোন ও হোয়াটসঅ্যাপ</h3>
-                    <p className="text-[#94A3B8] text-sm mb-2">সোম-শুক্র, সকাল ৯টা থেকে সন্ধ্যা ৬টা পর্যন্ত।</p>
-                    <a href="tel:+8801890195058" className="text-[#6366F1] hover:text-[#818CF8] font-medium transition-colors">
-                      +880 1890-195058
+                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">Phone & WhatsApp</h3>
+                    <p className="text-[#94A3B8] text-sm mb-2">Mon-Fri, 9AM to 6PM.</p>
+                    <a href="tel:+8801890195058" className="text-[#6366F1] hover:text-[#818CF8] font-medium transition-colors block">
+                      +880 1890-195058 (Bangladesh)
+                    </a>
+                    <a href="tel:+14375521639" className="text-[#6366F1] hover:text-[#818CF8] font-medium transition-colors block mt-1">
+                      +1 437-552-1639 (Canada)
                     </a>
                   </div>
                 </div>
@@ -95,10 +98,13 @@ const Contact = () => {
                     <FaMapMarkerAlt className="text-[#22D3EE] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">ঠিকানা</h3>
-                    <p className="text-[#94A3B8] text-sm mb-2">আমাদের অফিসে এসে সরাসরি কথা বলতে পারেন।</p>
+                    <h3 className="text-[#F1F5F9] font-bold text-lg mb-1">Our Offices</h3>
+                    <p className="text-[#94A3B8] text-sm mb-2">Visit us in person at either location.</p>
                     <p className="text-[#22D3EE] font-medium">
-                      ঢাকা, বাংলাদেশ
+                      Scarborough, Ontario, Canada
+                    </p>
+                    <p className="text-[#22D3EE] font-medium mt-1">
+                      Dhaka, Bangladesh
                     </p>
                   </div>
                 </div>
@@ -108,58 +114,58 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-7" data-aos="fade-left">
               <div className="glass-card p-8 md:p-10 border border-[#0EA5E9]/20 h-full">
-                <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">আমাদের একটি বার্তা পাঠান</h3>
+                <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">Send Us a Message</h3>
                 
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">নাম</label>
+                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">Name</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="আপনার নাম"
+                        placeholder="Your name"
                         className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">ইমেইল</label>
+                      <label className="block text-sm font-medium text-[#94A3B8] mb-2">Email</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="আপনার ইমেইল ঠিকানা"
+                        placeholder="Your email address"
                         className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">সেবার ধরন</label>
+                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">Service Type</label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all appearance-none"
                     >
-                      <option value="">সেবা নির্বাচন করুন</option>
-                      <option value="website">ওয়েবসাইট তৈরি</option>
-                      <option value="shopify">Shopify স্টোর ডিজাইন</option>
-                      <option value="marketing">Facebook মার্কেটিং</option>
-                      <option value="other">অন্যান্য</option>
+                      <option value="">Select a service</option>
+                      <option value="website">Website Development</option>
+                      <option value="shopify">Shopify Store Design</option>
+                      <option value="marketing">Facebook Marketing</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">বার্তা</label>
+                    <label className="block text-sm font-medium text-[#94A3B8] mb-2">Message</label>
                     <textarea
                       rows={5}
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="কিভাবে আমরা আপনাকে সাহায্য করতে পারি?"
+                      placeholder="How can we help you?"
                       className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all resize-none"
                     />
                   </div>
@@ -169,7 +175,7 @@ const Contact = () => {
                     className="w-full btn-primary justify-center py-3.5 text-lg"
                   >
                     <FaPaperPlane />
-                    বার্তা পাঠান
+                    Send Message
                   </button>
                 </form>
               </div>

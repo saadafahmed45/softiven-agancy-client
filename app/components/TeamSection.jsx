@@ -5,9 +5,9 @@ import { FaFacebook, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: "সাদ আহমেদ",
-    role: "প্রতিষ্ঠাতা ও CEO",
-    bio: "ওয়েব ডেভেলপমেন্ট ও ডিজিটাল মার্কেটিং-এ ৫+ বছরের অভিজ্ঞতাসম্পন্ন দক্ষ উদ্যোক্তা।",
+    name: "Saad Ahmed",
+    role: "Founder & CEO",
+    bio: "Skilled entrepreneur with 5+ years of experience in web development and digital marketing.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80&auto=format&fit=crop",
     color: "#0EA5E9",
     social: {
@@ -17,9 +17,9 @@ const teamMembers = [
     },
   },
   {
-    name: "রাহেলা বেগম",
-    role: "লিড ডিজাইনার",
-    bio: "UI/UX ডিজাইন ও ব্র্যান্ড আইডেন্টিটি নির্মাণে বিশেষজ্ঞ। সৌন্দর্য ও কার্যকারিতার নিখুঁত সমন্বয়ে ডিজাইন করেন।",
+    name: "Rahela Begum",
+    role: "Lead Designer",
+    bio: "Expert in UI/UX design and brand identity creation. Designs with a perfect blend of aesthetics and functionality.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80&auto=format&fit=crop",
     color: "#6366F1",
     social: {
@@ -29,9 +29,9 @@ const teamMembers = [
     },
   },
   {
-    name: "তানভীর হোসেন",
-    role: "Shopify বিশেষজ্ঞ",
-    bio: "Shopify স্টোর ডিজাইন ও ডেভেলপমেন্টে ৪+ বছরের অভিজ্ঞতা। ই-কমার্স সমাধানে দক্ষ পেশাদার।",
+    name: "Tanvir Hossain",
+    role: "Shopify Expert",
+    bio: "4+ years of experience in Shopify store design and development. Skilled professional in e-commerce solutions.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80&auto=format&fit=crop",
     color: "#22D3EE",
     social: {
@@ -41,9 +41,9 @@ const teamMembers = [
     },
   },
   {
-    name: "নাফিসা ইসলাম",
-    role: "Facebook মার্কেটিং বিশেষজ্ঞ",
-    bio: "টার্গেটেড Facebook বিজ্ঞাপন ও সোশ্যাল মিডিয়া মার্কেটিং-এ বিশেষজ্ঞ। ক্লায়েন্টের ROI বৃদ্ধিতে প্রমাণিত দক্ষতা।",
+    name: "Nafisa Islam",
+    role: "Facebook Marketing Expert",
+    bio: "Expert in targeted Facebook advertising and social media marketing. Proven ability to increase client ROI.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80&auto=format&fit=crop",
     color: "#EC4899",
     social: {
@@ -53,9 +53,9 @@ const teamMembers = [
     },
   },
   {
-    name: "মাহমুদ রেজা",
-    role: "ফুল-স্ট্যাক ডেভেলপার",
-    bio: "React, Next.js ও Node.js-এ দক্ষ ডেভেলপার। জটিল প্রজেক্টগুলো সহজে সম্পন্ন করার অদ্ভুত ক্ষমতা রাখেন।",
+    name: "Mahmud Reza",
+    role: "Full-Stack Developer",
+    bio: "Skilled developer in React, Next.js, and Node.js. Has the remarkable ability to complete complex projects with ease.",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80&auto=format&fit=crop",
     color: "#10B981",
     social: {
@@ -65,9 +65,9 @@ const teamMembers = [
     },
   },
   {
-    name: "সুমাইয়া খান",
-    role: "কনটেন্ট স্ট্র্যাটেজিস্ট",
-    bio: "সৃজনশীল কনটেন্ট তৈরি ও SEO কৌশলে বিশেষজ্ঞ। আপনার ব্র্যান্ডের গল্পকে আকর্ষণীয়ভাবে উপস্থাপন করেন।",
+    name: "Sumaiya Khan",
+    role: "Content Strategist",
+    bio: "Expert in creating engaging content and SEO strategy. Presents your brand story in an attractive way.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&q=80&auto=format&fit=crop",
     color: "#F59E0B",
     social: {
@@ -94,14 +94,14 @@ const TeamSection = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <div className="section-badge mb-4">আমাদের দল</div>
+          <div className="section-badge mb-4">Our Team</div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] mb-4">
-            অভিজ্ঞ ও{" "}
-            <span className="gradient-text">উৎসাহী পেশাদার দল</span>
+            Experienced &{" "}
+            <span className="gradient-text">Passionate Professionals</span>
           </h2>
           <p className="text-[#94A3B8] text-base md:text-lg max-w-2xl mx-auto">
-            আমাদের দলে রয়েছেন ডিজাইন, ডেভেলপমেন্ট ও মার্কেটিং-এর বিশেষজ্ঞরা
-            যারা আপনার ব্যবসাকে সাফল্যের দিকে নিয়ে যেতে প্রতিশ্রুতিবদ্ধ।
+            Our team consists of experts in design, development, and marketing
+            who are committed to driving your business to success.
           </p>
         </div>
 

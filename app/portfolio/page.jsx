@@ -60,12 +60,12 @@ export default function PortfolioPage() {
           <div className="blob w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-[#6366F1] bottom-0 right-0" style={{ animationDelay: "3s" }} />
         </div>
         <div className="relative max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <div className="section-badge mb-6">আমাদের পোর্টফোলিও</div>
+          <div className="section-badge mb-6">Our Portfolio</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F1F5F9] leading-tight mb-6">
-            আমাদের <span className="gradient-text">সফল প্রজেক্টসমূহ</span>
+            Our <span className="gradient-text">Successful Projects</span>
           </h1>
           <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed">
-            আমাদের তৈরি করা সৃজনশীল সমাধান এবং সাফল্যের গল্পগুলো দেখুন। আমরা আপনার জন্য কী করতে পারি তার একটি ঝলক।
+            Explore our creative solutions and success stories. See what we can do for you.
           </p>
         </div>
       </section>
@@ -185,15 +185,15 @@ export default function PortfolioPage() {
           <div className="glass-card p-12 text-center border border-[#0EA5E9]/20">
             <div className="shimmer-line mb-8" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#F1F5F9] mb-4">
-              আপনার প্রজেক্ট শুরু করতে প্রস্তুত?
+              Ready to Start Your Project?
             </h2>
             <p className="text-[#94A3B8] text-base md:text-lg mb-8 max-w-2xl mx-auto">
-              আমাদের দক্ষতার মাধ্যমে আপনার আইডিয়াগুলোকে বাস্তবে রূপ দিতে আমরা সর্বদা প্রস্তুত। 
-              আজই আমাদের সাথে যোগাযোগ করুন।
+              We are always ready to turn your ideas into reality through our expertise.
+              Contact us today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary text-base">
-                যোগাযোগ করুন
+                Contact Us
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>

@@ -11,7 +11,7 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  font-family: 'Inter', 'Hind Siliguri', sans-serif;
   background-color: #0A0F1E;
   color: #F1F5F9;
 }
@@ -54,7 +54,7 @@ body {
   padding: 12px 28px;
   border-radius: 10px;
   font-weight: 600;
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
   display: inline-flex;
@@ -76,7 +76,7 @@ body {
   padding: 11px 28px;
   border-radius: 10px;
   font-weight: 600;
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;

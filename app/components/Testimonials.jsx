@@ -6,55 +6,55 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 const testimonials = [
   {
     quote:
-      "Softiven আমার জন্য অসাধারণ একটি ওয়েবসাইট তৈরি করেছে। তারা আমার চাহিদা বুঝে পেশাদারভাবে কাজ করেছে। ওয়েবসাইটটি দেখে আমার গ্রাহকরা খুবই মুগ্ধ। সত্যিই দারুণ কাজ করেছে দলটি!",
-    name: "মোহাম্মদ রাকিব হাসান",
-    role: "স্বত্বাধিকারী, রাকিব গার্মেন্টস",
-    location: "ঢাকা, বাংলাদেশ",
+      "Softiven created an outstanding website for me. They understood my needs and worked professionally. My customers are truly impressed with the website. The team did a fantastic job!",
+    name: "Mohammad Rakib Hasan",
+    role: "Owner, Rakib Garments",
+    location: "Dhaka, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop",
   },
   {
     quote:
-      "Shopify স্টোর বানানোর জন্য Softiven-এর কাছে গিয়ে সঠিক সিদ্ধান্ত নিয়েছিলাম। তারা আমার স্টোর সুন্দরভাবে সাজিয়েছে এবং অনলাইন বিক্রয় ৩ গুণ বেড়ে গেছে। অসাধারণ সেবা!",
-    name: "নুসরাত জাহান",
-    role: "উদ্যোক্তা, NJ Fashion Store",
-    location: "চট্টগ্রাম, বাংলাদেশ",
+      "I made the right decision going to Softiven for my Shopify store. They designed my store beautifully and online sales have increased 3 times. Outstanding service!",
+    name: "Nusrat Jahan",
+    role: "Entrepreneur, NJ Fashion Store",
+    location: "Chittagong, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop",
   },
   {
     quote:
-      "Facebook মার্কেটিং ক্যাম্পেইনের জন্য Softiven-এর সাথে কাজ করা সত্যিই উপকারী ছিল। মাত্র ৩ মাসে আমার ব্যবসার বিক্রয় দ্বিগুণ হয়েছে। তাদের টার্গেটেড বিজ্ঞাপন কৌশল অসাধারণ কার্যকর।",
-    name: "সাইফুল ইসলাম",
-    role: "ম্যানেজিং ডিরেক্টর, SL Electronics",
-    location: "সিলেট, বাংলাদেশ",
+      "Working with Softiven on the Facebook marketing campaign was truly beneficial. In just 3 months, my business sales doubled. Their targeted advertising strategy is incredibly effective.",
+    name: "Saiful Islam",
+    role: "Managing Director, SL Electronics",
+    location: "Sylhet, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop",
   },
   {
     quote:
-      "Softiven থেকে সম্পূর্ণ ব্যবসায়িক ডিজিটাল প্যাকেজ নিয়েছি — ওয়েবসাইট, ব্র্যান্ডিং আর মার্কেটিং। সব কিছু এক জায়গায় পেয়েছি এবং মান অত্যন্ত উচ্চমানের। সবাইকে রিকমেন্ড করব।",
-    name: "ফারহান আহমেদ",
+      "I got a complete business digital package from Softiven — website, branding, and marketing. Everything in one place and the quality is excellent. Highly recommend to everyone.",
+    name: "Farhan Ahmed",
     role: "CEO, Farhan Tech Solutions",
-    location: "রাজশাহী, বাংলাদেশ",
+    location: "Rajshahi, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop",
   },
   {
     quote:
-      "আমার রেস্টুরেন্টের জন্য প্রফেশনাল ওয়েবসাইট ও ফেসবুক পেইজ ম্যানেজমেন্ট করে দিয়েছে Softiven। এখন অনলাইনে অর্ডার অনেক বেড়েছে। দলটি খুবই আন্তরিক এবং দ্রুত সাপোর্ট দেয়।",
-    name: "তাহমিনা বেগম",
-    role: "স্বত্বাধিকারী, তাহমিনা কিচেন",
-    location: "ময়মনসিংহ, বাংলাদেশ",
+      "Softiven created a professional website and manages my Facebook page for my restaurant. Online orders have increased significantly. The team is very dedicated and provides quick support.",
+    name: "Tahmina Begum",
+    role: "Owner, Tahmina Kitchen",
+    location: "Mymensingh, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80&auto=format&fit=crop",
   },
   {
     quote:
-      "Shopify স্টোর ডিজাইন ও ডেভেলপমেন্টে Softiven সেরা। তারা আমার পণ্যগুলো সুন্দরভাবে উপস্থাপন করেছে এবং পেমেন্ট সিস্টেম নিখুঁতভাবে সেটআপ করে দিয়েছে। খুবই প্রফেশনাল টিম।",
-    name: "আরিফুল ইসলাম",
-    role: "ই-কমার্স উদ্যোক্তা",
-    location: "খুলনা, বাংলাদেশ",
+      "Softiven is the best at Shopify store design and development. They presented my products beautifully and set up the payment system perfectly. A very professional team.",
+    name: "Ariful Islam",
+    role: "E-Commerce Entrepreneur",
+    location: "Khulna, Bangladesh",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80&auto=format&fit=crop",
   },
@@ -93,20 +93,20 @@ const Testimonials = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <div className="section-badge mb-4">ক্লায়েন্ট রিভিউ</div>
+          <div className="section-badge mb-4">Client Reviews</div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] mb-4">
-            আমাদের{" "}
-            <span className="gradient-text">ক্লায়েন্টরা কী বলেন</span>
+            What Our{" "}
+            <span className="gradient-text">Clients Say</span>
           </h2>
           <p className="text-[#94A3B8] text-base md:text-lg max-w-2xl mx-auto">
-            বাংলাদেশের বিভিন্ন প্রান্তের সফল উদ্যোক্তারা Softiven-এর সাথে
-            তাদের ডিজিটাল যাত্রা শুরু করেছেন।
+            Successful entrepreneurs from across Bangladesh have started
+            their digital journey with Softiven.
           </p>
           {/* Overall rating */}
           <div className="flex items-center justify-center gap-3 mt-6">
             <StarRating rating={5} />
-            <span className="text-[#F1F5F9] font-bold text-lg">৫.০</span>
-            <span className="text-[#64748B] text-sm">({testimonials.length * 30}+ রিভিউ)</span>
+            <span className="text-[#F1F5F9] font-bold text-lg">5.0</span>
+            <span className="text-[#64748B] text-sm">({testimonials.length * 30}+ Reviews)</span>
           </div>
         </div>
 
@@ -152,10 +152,10 @@ const Testimonials = () => {
         {/* Trust indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
           {[
-            { value: "১৫০+", label: "সন্তুষ্ট ক্লায়েন্ট" },
-            { value: "৯৮%", label: "সাফল্যের হার" },
-            { value: "২০০+", label: "সফল প্রজেক্ট" },
-            { value: "৪+", label: "বছরের অভিজ্ঞতা" },
+            { value: "150+", label: "Satisfied Clients" },
+            { value: "98%", label: "Success Rate" },
+            { value: "200+", label: "Successful Projects" },
+            { value: "4+", label: "Years of Experience" },
           ].map((stat, i) => (
             <div key={i} className="stat-card text-center">
               <p className="text-2xl font-bold gradient-text">{stat.value}</p>

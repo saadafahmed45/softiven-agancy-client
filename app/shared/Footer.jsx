@@ -7,7 +7,7 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Our Projects" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -127,13 +127,25 @@ export default function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-[#22D3EE]/10 border border-[#22D3EE]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#22D3EE]/20">
                   <FaPhoneAlt className="text-[#22D3EE] text-xs" />
                 </div>
-                +880 1890-195058
+                +880 1890-195058 (BD)
+              </a>
+              <a
+                href="tel:+14375521639"
+                className="flex items-center gap-3 text-[#64748B] text-sm hover:text-[#22D3EE] transition-colors duration-200 group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#22D3EE]/10 border border-[#22D3EE]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#22D3EE]/20">
+                  <FaPhoneAlt className="text-[#22D3EE] text-xs" />
+                </div>
+                +1 437-552-1639 (CA)
               </a>
               <div className="flex items-start gap-3 text-[#64748B] text-sm">
                 <div className="w-8 h-8 rounded-lg bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <FaMapMarkerAlt className="text-[#6366F1] text-xs" />
                 </div>
-                Dhaka, Bangladesh
+                <div>
+                  <p>Scarborough, Ontario, Canada</p>
+                  <p className="mt-1">Dhaka, Bangladesh</p>
+                </div>
               </div>
             </div>
 

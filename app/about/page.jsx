@@ -12,31 +12,31 @@ import {
 } from "lucide-react";
 
 const whyChooseItems = [
-  "অভিজ্ঞ ডেভেলপার, ডিজাইনার ও মার্কেটার টিম",
-  "বিভিন্ন শিল্পে সফল প্রজেক্টের প্রমাণিত ট্র্যাক রেকর্ড",
-  "সময়মতো ডেলিভারি ও দ্রুত সাপোর্ট",
-  "আধুনিক প্রযুক্তি ও সেরা অনুশীলন",
-  "বাজেট-বান্ধব প্যাকেজ ও কাস্টম সমাধান",
-  "সম্পূর্ণ ডিজিটাল মার্কেটিং সমাধান",
+  "Experienced team of developers, designers, and marketers",
+  "Proven track record of successful projects across industries",
+  "Timely delivery and quick support",
+  "Modern technology and best practices",
+  "Budget-friendly packages and custom solutions",
+  "Complete digital marketing solutions",
 ];
 
 const coreValues = [
   {
     icon: Zap,
-    title: "উদ্ভাবন",
-    desc: "আমরা সর্বদা নতুন প্রযুক্তি ও পদ্ধতি ব্যবহার করে অত্যাধুনিক সমাধান তৈরি করি।",
+    title: "Innovation",
+    desc: "We always use the latest technologies and methods to create cutting-edge solutions.",
     color: "#0EA5E9",
   },
   {
     icon: Target,
-    title: "শ্রেষ্ঠত্ব",
-    desc: "আমরা এমন উচ্চমানের সমাধান দিতে প্রতিশ্রুতিবদ্ধ যা প্রত্যাশার চেয়ে বেশি ফলাফল দেয়।",
+    title: "Excellence",
+    desc: "We are committed to delivering high-quality solutions that exceed expectations.",
     color: "#6366F1",
   },
   {
     icon: Heart,
-    title: "আন্তরিকতা",
-    desc: "আমরা আপনার ব্যবসাকে নিজের মতো ভাবি এবং সর্বোচ্চ মনোযোগ দিয়ে কাজ করি।",
+    title: "Integrity",
+    desc: "We treat your business as our own and work with utmost dedication and focus.",
     color: "#22D3EE",
   },
 ];
@@ -55,15 +55,15 @@ export default function AboutPage() {
           <div className="blob w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] bg-[#6366F1] bottom-0 left-0" style={{ animationDelay: "3s" }} />
         </div>
         <div className="relative max-w-5xl mx-auto text-center" data-aos="fade-up">
-          <div className="section-badge mb-6">আমাদের সম্পর্কে</div>
+          <div className="section-badge mb-6">About Us</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F1F5F9] leading-tight mb-6">
-            আপনার ব্যবসার{" "}
-            <span className="gradient-text">ডিজিটাল পার্টনার</span>
+            Your Business's{" "}
+            <span className="gradient-text">Digital Partner</span>
           </h1>
           <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Softiven-এ আমরা বিশ্বাস করি প্রতিটি ব্যবসার একটি শক্তিশালী ডিজিটাল উপস্থিতি প্রয়োজন।
-            আমরা ওয়েবসাইট তৈরি, Shopify স্টোর ডিজাইন ও ফেসবুক মার্কেটিং-এর মাধ্যমে
-            আপনার ব্যবসাকে এগিয়ে নিয়ে যাই।
+            At Softiven, we believe every business needs a strong digital presence.
+            We help you move forward through website development, Shopify store design,
+            and Facebook marketing.
           </p>
         </div>
       </section>
@@ -87,34 +87,34 @@ export default function AboutPage() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 glass-card p-5 border border-[#0EA5E9]/30">
-                <p className="text-3xl font-bold gradient-text">২০২১</p>
-                <p className="text-[#94A3B8] text-sm">সাল থেকে সেবায়</p>
+                <p className="text-3xl font-bold gradient-text">2021</p>
+                <p className="text-[#94A3B8] text-sm">Serving since</p>
               </div>
             </div>
 
             {/* Content */}
             <div data-aos="fade-left" className="space-y-6">
-              <div className="section-badge">আমাদের যাত্রা</div>
+              <div className="section-badge">Our Journey</div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#F1F5F9]">
-                কিভাবে শুরু হলো{" "}
-                <span className="gradient-text">Softiven?</span>
+                How{" "}
+                <span className="gradient-text">Softiven</span> Started?
               </h2>
               <p className="text-[#94A3B8] text-base leading-relaxed">
-                ২০২১ সালে একটি সহজ লক্ষ্য নিয়ে Softiven প্রতিষ্ঠিত হয় — বাংলাদেশের ব্যবসায়ীদের
-                জন্য সাশ্রয়ী ও প্রফেশনাল ডিজিটাল সমাধান তৈরি করা।
+                Softiven was founded in 2021 with a simple goal — to create affordable
+                and professional digital solutions for businesses in Bangladesh.
               </p>
               <p className="text-[#94A3B8] text-base leading-relaxed">
-                আমাদের যাত্রা শুরু হয়েছিল ওয়েব ডেভেলপমেন্ট দিয়ে। ক্রমশ আমরা Shopify স্টোর
-                ডিজাইন, Facebook মার্কেটিং এবং সম্পূর্ণ ডিজিটাল বিজনেস সলিউশনে প্রসারিত হয়েছি।
-                আমাদের লক্ষ্য সবসময় — আপনার ব্যবসার বৃদ্ধি নিশ্চিত করা।
+                Our journey started with web development. Gradually, we expanded into
+                Shopify store design, Facebook marketing, and complete digital business
+                solutions. Our goal has always been — to ensure your business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/portfolio" className="btn-primary">
-                  আমাদের কাজ দেখুন
+                  See Our Work
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="/contact" className="btn-outline">
-                  যোগাযোগ করুন
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -128,10 +128,10 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 px-6 md:px-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16" data-aos="fade-up">
-            <div className="section-badge">আমাদের মূল্যবোধ</div>
+            <div className="section-badge">Our Core Values</div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] mt-4">
-              যা আমাদের{" "}
-              <span className="gradient-text">আলাদা করে</span>
+              What Makes Us{" "}
+              <span className="gradient-text">Different</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
@@ -158,9 +158,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right" className="space-y-6">
-              <div className="section-badge">কেন আমরা?</div>
+              <div className="section-badge">Why Choose Us?</div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#F1F5F9]">
-                কেন Softiven বেছে নেবেন?
+                Why Choose Softiven?
               </h2>
               <ul className="space-y-4">
                 {whyChooseItems.map((item, i) => (
@@ -174,7 +174,7 @@ export default function AboutPage() {
               </ul>
               <div className="pt-2">
                 <Link href="/services" className="btn-primary">
-                  আমাদের সেবা দেখুন
+                  View Our Services
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -204,15 +204,15 @@ export default function AboutPage() {
           <div className="glass-card p-12 border border-[#0EA5E9]/20">
             <div className="shimmer-line mb-8" />
             <h2 className="text-3xl md:text-5xl font-bold text-[#F1F5F9] mb-6">
-              আজই আপনার ব্যবসার{" "}
-              <span className="gradient-text">ডিজিটাল সফর শুরু করুন</span>
+              Start Your Business's{" "}
+              <span className="gradient-text">Digital Journey Today</span>
             </h2>
             <p className="text-[#94A3B8] text-lg mb-8 max-w-2xl mx-auto">
-              বিনামূল্যে পরামর্শ নিন এবং জানুন কিভাবে আমরা আপনার ব্যবসাকে
-              অনলাইনে এগিয়ে নিয়ে যেতে পারি।
+              Get a free consultation and learn how we can take your business
+              forward online.
             </p>
             <Link href="/contact" className="btn-primary text-base">
-              <span>বিনামূল্যে পরামর্শ নিন</span>
+              <span>Get Free Consultation</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
             <div className="shimmer-line mt-8" />

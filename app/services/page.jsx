@@ -16,89 +16,89 @@ import Link from "next/link";
 const services = [
   {
     icon: Globe,
-    title: "প্রফেশনাল ওয়েবসাইট তৈরি",
+    title: "Professional Website Development",
     description:
-      "আপনার ব্যবসার জন্য আকর্ষণীয় ও সম্পূর্ণ রেসপনসিভ ওয়েবসাইট তৈরি করা হয় যা যেকোনো ডিভাইসে সুন্দরভাবে কাজ করে।",
+      "We create attractive and fully responsive websites for your business that work beautifully on any device.",
     features: [
-      "কাস্টম ডিজাইন ও ডেভেলপমেন্ট",
-      "মোবাইল-ফার্স্ট রেসপনসিভ লেআউট",
-      "SEO-ফ্রেন্ডলি কোড",
-      "দ্রুত লোডিং স্পিড",
+      "Custom Design & Development",
+      "Mobile-First Responsive Layout",
+      "SEO-Friendly Code",
+      "Fast Loading Speed",
     ],
     color: "#0EA5E9",
     gradient: "from-[#0EA5E9] to-[#22D3EE]",
-    badge: "সবচেয়ে জনপ্রিয়",
+    badge: "Most Popular",
   },
   {
     icon: ShoppingBag,
-    title: "Shopify স্টোর ডিজাইন ও ডেভেলপমেন্ট",
+    title: "Shopify Store Design & Development",
     description:
-      "আপনার অনলাইন ব্যবসার জন্য পেশাদার Shopify স্টোর তৈরি করুন। পণ্য বিক্রি থেকে পেমেন্ট পর্যন্ত সবকিছু সুবিধাজনকভাবে পরিচালনা করুন।",
+      "Create a professional Shopify store for your online business. Manage everything from product sales to payments seamlessly.",
     features: [
-      "কাস্টম থিম ডিজাইন",
-      "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন",
-      "প্রোডাক্ট ম্যানেজমেন্ট সেটআপ",
-      "অ্যাপ ইন্টিগ্রেশন",
+      "Custom Theme Design",
+      "Payment Gateway Integration",
+      "Product Management Setup",
+      "App Integration",
     ],
     color: "#6366F1",
     gradient: "from-[#6366F1] to-[#8B5CF6]",
-    badge: "ই-কমার্স",
+    badge: "E-Commerce",
   },
   {
     icon: Megaphone,
-    title: "Facebook মার্কেটিং ও বিজ্ঞাপন",
+    title: "Facebook Marketing & Advertising",
     description:
-      "টার্গেটেড Facebook বিজ্ঞাপন প্রচারণার মাধ্যমে আপনার সঠিক কাস্টমারের কাছে পৌঁছান এবং বিক্রয় বাড়ান।",
+      "Reach the right customers and boost sales through targeted Facebook ad campaigns.",
     features: [
-      "টার্গেটেড অ্যাড ক্যাম্পেইন",
-      "কনটেন্ট ক্রিয়েশন",
-      "অ্যাড পারফরম্যান্স ট্র্যাকিং",
-      "ROI অপটিমাইজেশন",
+      "Targeted Ad Campaigns",
+      "Content Creation",
+      "Ad Performance Tracking",
+      "ROI Optimization",
     ],
     color: "#22D3EE",
     gradient: "from-[#22D3EE] to-[#0EA5E9]",
-    badge: "মার্কেটিং",
+    badge: "Marketing",
   },
   {
     icon: BarChart3,
-    title: "সম্পূর্ণ ব্যবসায়িক সমাধান",
+    title: "Complete Business Solution",
     description:
-      "আপনার ব্যবসার শুরু থেকে বিকাশ পর্যন্ত সম্পূর্ণ ডিজিটাল সমাধান প্রদান করি। একটি প্যাকেজে সব সেবা পান।",
+      "We provide complete digital solutions from starting to growing your business. Get all services in one package.",
     features: [
-      "ওয়েবসাইট + মার্কেটিং প্যাকেজ",
-      "ব্র্যান্ড আইডেন্টিটি তৈরি",
-      "সোশ্যাল মিডিয়া ম্যানেজমেন্ট",
-      "মাসিক পারফরম্যান্স রিপোর্ট",
+      "Website + Marketing Package",
+      "Brand Identity Creation",
+      "Social Media Management",
+      "Monthly Performance Reports",
     ],
     color: "#F59E0B",
     gradient: "from-[#F59E0B] to-[#EF4444]",
-    badge: "অল-ইন-ওয়ান",
+    badge: "All-in-One",
   },
   {
     icon: Palette,
-    title: "ব্র্যান্ড ডিজাইন ও গ্রাফিক্স",
+    title: "Brand Design & Graphics",
     description:
-      "আপনার ব্র্যান্ডকে আকর্ষণীয়ভাবে উপস্থাপন করুন। লোগো থেকে শুরু করে সম্পূর্ণ ব্র্যান্ড আইডেন্টিটি তৈরি করি।",
+      "Present your brand attractively. From logos to complete brand identity, we create it all.",
     features: [
-      "লোগো ডিজাইন",
-      "ব্যানার ও পোস্টার",
-      "সোশ্যাল মিডিয়া ডিজাইন",
-      "UI/UX ডিজাইন",
+      "Logo Design",
+      "Banners & Posters",
+      "Social Media Design",
+      "UI/UX Design",
     ],
     color: "#EC4899",
     gradient: "from-[#EC4899] to-[#8B5CF6]",
-    badge: "ক্রিয়েটিভ",
+    badge: "Creative",
   },
   {
     icon: Search,
-    title: "SEO ও ডিজিটাল মার্কেটিং",
+    title: "SEO & Digital Marketing",
     description:
-      "Google-এ আপনার ব্যবসার র‍্যাংকিং বাড়ান এবং অর্গানিক ট্র্যাফিক বৃদ্ধি করুন। দীর্ঘমেয়াদী ডিজিটাল সাফল্য নিশ্চিত করুন।",
+      "Boost your business ranking on Google and increase organic traffic. Ensure long-term digital success.",
     features: [
-      "কীওয়ার্ড রিসার্চ ও অপটিমাইজেশন",
-      "গুগল মাই বিজনেস সেটআপ",
-      "কনটেন্ট মার্কেটিং",
-      "লিংক বিল্ডিং",
+      "Keyword Research & Optimization",
+      "Google My Business Setup",
+      "Content Marketing",
+      "Link Building",
     ],
     color: "#10B981",
     gradient: "from-[#10B981] to-[#22D3EE]",
@@ -120,14 +120,14 @@ export default function ServicesPage() {
           <div className="blob w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-[#0EA5E9] bottom-0 right-0" style={{ animationDelay: "3s" }} />
         </div>
         <div className="relative max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <div className="section-badge mb-6">আমাদের সেবাসমূহ</div>
+          <div className="section-badge mb-6">Our Services</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F1F5F9] leading-tight mb-6">
-            আপনার ব্যবসার জন্য{" "}
-            <span className="gradient-text">সম্পূর্ণ ডিজিটাল সমাধান</span>
+            Complete{" "}
+            <span className="gradient-text">Digital Solutions</span> for Your Business
           </h1>
           <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed">
-            ওয়েবসাইট থেকে Shopify স্টোর, Facebook মার্কেটিং থেকে ব্র্যান্ড ডিজাইন —
-            আপনার ব্যবসার ডিজিটাল সাফল্যের জন্য সব সেবা এক ছাদের নিচে।
+            From websites to Shopify stores, Facebook marketing to brand design —
+            all services under one roof for your digital success.
           </p>
         </div>
       </section>
@@ -202,19 +202,19 @@ export default function ServicesPage() {
           <div className="glass-card p-12 text-center border border-[#0EA5E9]/20">
             <div className="shimmer-line mb-8" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#F1F5F9] mb-4">
-              কাস্টম সমাধান দরকার?
+              Need a Custom Solution?
             </h2>
             <p className="text-[#94A3B8] text-base md:text-lg mb-8 max-w-2xl mx-auto">
-              আমরা আপনার ব্যবসার নির্দিষ্ট চাহিদা অনুযায়ী কাস্টম সমাধান তৈরি করি।
-              আজই বিনামূল্যে পরামর্শ নিন এবং আপনার স্বপ্নের প্রজেক্ট শুরু করুন।
+              We create custom solutions tailored to your specific business needs.
+              Get a free consultation today and start your dream project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary text-base">
-                বিনামূল্যে পরামর্শ নিন
+                Get Free Consultation
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link href="/portfolio" className="btn-outline text-base">
-                আমাদের পোর্টফোলিও দেখুন
+                View Our Portfolio
               </Link>
             </div>
             <div className="shimmer-line mt-8" />

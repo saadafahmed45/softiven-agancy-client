@@ -54,11 +54,18 @@ const Cta = () => {
               Get a Free Consultation
             </Link>
             <a
+              href="tel:+14375521639"
+              className="btn-outline text-base w-full sm:w-auto justify-center"
+            >
+              <FaPhoneAlt className="text-xs" />
+              Call Now (Canada)
+            </a>
+            <a
               href="tel:+8801890195058"
               className="btn-outline text-base w-full sm:w-auto justify-center"
             >
               <FaPhoneAlt className="text-xs" />
-              Call Now
+              Call Now (Bangladesh)
             </a>
           </div>
 

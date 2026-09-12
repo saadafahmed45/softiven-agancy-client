@@ -12,7 +12,7 @@ export default function Home() {
     <main className="bg-[#0A0F1E]">
       <Hero />
       <FloatingWhatsApp
-        phoneNumber="+8801890195058"
+        phoneNumber="+14375521639"
         accountName="Softiven Team"
         chatMessage="Hello! How can we help you? 😊"
         statusMessage="Usually replies within 1 hour"
