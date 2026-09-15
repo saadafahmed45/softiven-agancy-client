@@ -1,18 +1,21 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
-import { FaCheckCircle, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import {
+  FaCheckCircle,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaPaperPlane,
+  FaSpinner,
+  FaExclamationCircle,
+} from "react-icons/fa";
 
 const EMAIL = "mohammadhaolader1@gmail.com";
 
-const SERVICE_LABELS = {
-  website: "Website Development",
-  shopify: "Shopify Store Design",
-  marketing: "Facebook Marketing",
-  other: "Other",
-};
-
 const Contact = () => {
+  const formRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,20 +23,17 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("idle"); // idle | opening | sent
-  const sentTimerRef = useRef(null);
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
 
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
 
-  useEffect(() => () => clearTimeout(sentTimerRef.current), []);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear the field error and the "sent" notice as soon as the user edits again
+    // Clear the field error as soon as the user edits again
     if (errors[name]) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -41,7 +41,7 @@ const Contact = () => {
         return next;
       });
     }
-    if (status === "sent") {
+    if (status === "success" || status === "error") {
       setStatus("idle");
     }
   };
@@ -62,35 +62,60 @@ const Contact = () => {
     return next;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    const serviceLabel = SERVICE_LABELS[formData.service];
-    const subject = `New contact request${serviceLabel ? ` - ${serviceLabel}` : ""}`;
-    const body = [
-      `Name: ${formData.name.trim()}`,
-      `Email: ${formData.email.trim()}`,
-      `Service: ${serviceLabel || "Not specified"}`,
-      "",
-      "Message:",
-      formData.message.trim(),
-    ].join("\n");
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    // Keep a copy on the clipboard so the visitor still has the message
-    // even if no email app is installed on their device.
-    const summary = `To: ${EMAIL}\nSubject: ${subject}\n\n${body}`;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(summary).catch(() => {});
+    // Gracefully handle missing or placeholder environment variables without crashing
+    if (
+      !serviceId ||
+      !templateId ||
+      !publicKey ||
+      serviceId === "YOUR_SERVICE_ID" ||
+      templateId === "YOUR_TEMPLATE_ID" ||
+      publicKey === "YOUR_PUBLIC_KEY"
+    ) {
+      console.error(
+        "EmailJS Error: Missing or unconfigured environment variables. Please configure NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY in .env.local or Vercel Environment Variables."
+      );
+      setStatus("error");
+      return;
     }
 
-    setStatus("opening");
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (!formRef.current) return;
 
-    sentTimerRef.current = window.setTimeout(() => setStatus("sent"), 1200);
+    setStatus("submitting");
+
+    try {
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current,
+        publicKey
+      );
+
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        service: "",
+        message: "",
+      });
+      setErrors({});
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error?.text || error?.message || error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -173,7 +198,13 @@ const Contact = () => {
               <div className="glass-card p-8 md:p-10 border border-[#0EA5E9]/20 h-full">
                 <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">Send Us a Message</h3>
                 
-                <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+                <form ref={formRef} className="space-y-6" onSubmit={handleSubmit} noValidate>
+                  {/* Hidden field for EmailJS template subject variable {{title}} */}
+                  <input
+                    type="hidden"
+                    name="title"
+                    value={formData.service ? `${formData.service} Inquiry` : "New Project Inquiry"}
+                  />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="contact-name" className="block text-sm font-medium text-[#94A3B8] mb-2">
@@ -235,10 +266,10 @@ const Contact = () => {
                       className="w-full px-4 py-3 bg-[#0F172A] border border-[#1E293B] rounded-xl text-[#F1F5F9] focus:outline-none focus:border-[#0EA5E9] focus:ring-1 focus:ring-[#0EA5E9] transition-all appearance-none"
                     >
                       <option value="">Select a service</option>
-                      <option value="website">Website Development</option>
-                      <option value="shopify">Shopify Store Design</option>
-                      <option value="marketing">Facebook Marketing</option>
-                      <option value="other">Other</option>
+                      <option value="Website Development">Website Development</option>
+                      <option value="Shopify Store Design">Shopify Store Design</option>
+                      <option value="Facebook Marketing">Facebook Marketing</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
@@ -269,27 +300,66 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    disabled={status === "opening"}
+                    disabled={status === "submitting"}
                     className="w-full btn-primary justify-center py-3.5 text-lg disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <FaPaperPlane className={status === "opening" ? "animate-pulse" : ""} />
-                    {status === "opening" ? "Opening your email app..." : "Send Message"}
+                    {status === "submitting" ? (
+                      <>
+                        <FaSpinner className="animate-spin text-xl" />
+                        <span>Sending...</span>
+                      </>
+                    ) : status === "success" ? (
+                      <>
+                        <FaCheckCircle className="text-xl text-emerald-300" />
+                        <span>Message Sent Successfully</span>
+                      </>
+                    ) : status === "error" ? (
+                      <>
+                        <FaExclamationCircle className="text-xl text-rose-300" />
+                        <span>Failed to send message. Please try again.</span>
+                      </>
+                    ) : (
+                      <>
+                        <FaPaperPlane className="text-lg" />
+                        <span>Send Message</span>
+                      </>
+                    )}
                   </button>
 
-                  {status === "sent" && (
+                  {status === "success" && (
                     <div
                       role="status"
                       className="flex items-start gap-3 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm leading-relaxed"
                     >
-                      <FaCheckCircle className="mt-0.5 flex-shrink-0" />
-                      <p>
-                        Your email app should have opened with your message ready to send. If it did not
-                        open, no worries — we saved a copy to your clipboard. Paste it into a new email to{" "}
-                        <a href={`mailto:${EMAIL}`} className="underline underline-offset-2 hover:text-emerald-200">
-                          {EMAIL}
-                        </a>
-                        .
-                      </p>
+                      <FaCheckCircle className="mt-0.5 flex-shrink-0 text-emerald-400 text-base" />
+                      <div>
+                        <p className="font-semibold text-emerald-200">Message Sent Successfully!</p>
+                        <p className="text-emerald-300/90 text-sm mt-0.5">
+                          Thank you for reaching out. We have received your inquiry and our team will get back to you promptly.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {status === "error" && (
+                    <div
+                      role="alert"
+                      className="flex items-start gap-3 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-sm leading-relaxed"
+                    >
+                      <FaExclamationCircle className="mt-0.5 flex-shrink-0 text-rose-400 text-base" />
+                      <div>
+                        <p className="font-semibold text-rose-200">Failed to send message. Please try again.</p>
+                        <p className="text-rose-300/90 text-sm mt-0.5">
+                          Something went wrong. Please check your connection or reach out to us directly at{" "}
+                          <a
+                            href={`mailto:${EMAIL}`}
+                            className="underline underline-offset-2 hover:text-rose-100 font-medium"
+                          >
+                            {EMAIL}
+                          </a>
+                          .
+                        </p>
+                      </div>
                     </div>
                   )}
                 </form>
