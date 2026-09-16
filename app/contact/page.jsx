@@ -69,19 +69,25 @@ const Contact = () => {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceId =
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID"
+        ? process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+        : "service_softiven_email40";
 
-    // Gracefully handle missing or placeholder environment variables without crashing
-    if (
-      !serviceId ||
-      !templateId ||
-      !publicKey ||
-      serviceId === "YOUR_SERVICE_ID" ||
-      templateId === "YOUR_TEMPLATE_ID" ||
-      publicKey === "YOUR_PUBLIC_KEY"
-    ) {
+    const templateId =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID"
+        ? process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+        : "template_v5lsweu";
+
+    const publicKey =
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY &&
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY"
+        ? process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        : "WADa8awrU83lH-HWq";
+
+    if (!serviceId || !templateId || !publicKey) {
       console.error(
         "EmailJS Error: Missing or unconfigured environment variables. Please configure NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY in .env.local or Vercel Environment Variables."
       );
@@ -199,12 +205,16 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-[#F1F5F9] mb-6">Send Us a Message</h3>
                 
                 <form ref={formRef} className="space-y-6" onSubmit={handleSubmit} noValidate>
-                  {/* Hidden field for EmailJS template subject variable {{title}} */}
+                  {/* Hidden fields for EmailJS template variables */}
                   <input
                     type="hidden"
                     name="title"
                     value={formData.service ? `${formData.service} Inquiry` : "New Project Inquiry"}
                   />
+                  <input type="hidden" name="from_name" value={formData.name} />
+                  <input type="hidden" name="reply_to" value={formData.email} />
+                  <input type="hidden" name="user_name" value={formData.name} />
+                  <input type="hidden" name="user_email" value={formData.email} />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="contact-name" className="block text-sm font-medium text-[#94A3B8] mb-2">
